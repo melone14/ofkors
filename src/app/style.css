@@ -1,0 +1,29 @@
+.home-main-section {
+    background-image: url('/images/Ofkors - ph - anojszewska 8 lg.jpg');
+    width: 100%;
+    height: 100vh; /* Możesz dostosować wysokość w zależności od Twoich potrzeb */
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .home-main-section {
+        background-image: url('/images/Ofkors - ph - anojszewska 8 md.jpg');
+        width: 100%;
+        height: 100vh; /* Możesz dostosować wysokość w zależności od Twoich potrzeb */
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .home-main-section {
+        background-image: url('/images/Ofkors - ph - anojszewska 8 sm.jpg');
+        height: 60vh;/* Możesz dostosować wysokość w zależności od Twoich potrzeb */
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+

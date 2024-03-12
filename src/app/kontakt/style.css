@@ -1,0 +1,11 @@
+.contact-main-section {
+    width: 100%;
+    background-image: url('/images/kontakt zdj.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-main-section > div {
+    opacity: 0.85;
+    background-color: #FFFFFF;
+}

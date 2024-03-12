@@ -1,0 +1,23 @@
+import { Metadata } from "next"
+import { getBlogPostsCategoryList } from "@/clients/clients"
+import { BlogCard } from "@/components/blog/BlogCard"
+
+export const metadata: Metadata = {
+    title: 'Ofkors | Blog',
+    description: 'Ofkors | BLog',
+  }
+
+export default async function BlogCategoryList({ params }: { params: { slug: string } }) {
+    const response = await getBlogPostsCategoryList(params.slug)
+
+    return (
+        <>
+            <h1 className="mt-20 text-6xl text-medium">Z naszego Bloga</h1>
+            {response.posts.map((post, index)=>{
+                return (
+                    <BlogCard key={index} article={post} />
+                )
+            })}
+        </>
+    )
+}
