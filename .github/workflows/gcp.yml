@@ -21,7 +21,7 @@ jobs:
 
       - name: Typescript Check
         run : |
-          yarn next lint
+          yarn lint
 
       - name: Google Cloud Auth
         uses: 'google-github-actions/auth@v2'
