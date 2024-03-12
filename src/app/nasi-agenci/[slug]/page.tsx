@@ -21,7 +21,7 @@ export default async function Page ({ params }: { params: { slug: string } }) {
         <>
         <div className="flex flex-col md:flex-row gap-x-10 items-center my-10 px-5 lg:px-0">
             <div className="flex flex-col items-center text-white bg-[#47141e] p-5 rounded-2xl mb-10 md:mb-0 shadow-xl">
-                <img className="w-80 rounded-xl" src={agent.full_img} alt={agent.name}/>
+                <img className="w-80 rounded-xl" src={agent?.full_img} alt={agent.name}/>
                 <h1 className="text-2xl font-bold my-5">{response.agent.name}</h1>
                 <h2 className="text-2xl mb-5">{response.agent.bio}</h2>
                 <div className="text-xl mb-5 flex flex-row items-center"><Phone className="mr-2.5"/> +48 {response.agent.phone}</div>
