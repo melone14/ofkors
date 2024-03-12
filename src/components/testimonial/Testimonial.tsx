@@ -28,7 +28,7 @@ export const Testimonial = ({currentOpinion} : {currentOpinion: any}) => {
                     <div><Rating sx={{ '& .MuiRating-iconFilled': {
                         color: '#47141e',
                     },}} readOnly value={currentOpinion.rating} /></div>
-                    <div className="max-w-[20rem] md:max-w-[30rem] text-xl text-center min-h-40">"{currentOpinion.descrition}"</div>
+                    <div className="max-w-[20rem] md:max-w-[30rem] text-xl text-center min-h-40">&apos;{currentOpinion.descrition}&apos;</div>
                     <div className="flex flex-row gap-x-5 items-center">
                         <Image className="w-16 h-16 rounded-full" src={Agents} alt={currentOpinion.name} />
                         <div className="h-16 flex flex-col items-start justify-between">
