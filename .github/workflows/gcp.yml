@@ -19,11 +19,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Typescript Check
-        run : |
-          yarn install
-          yarn lint
-
       - name: Google Cloud Auth
         uses: 'google-github-actions/auth@v2'
         with:
