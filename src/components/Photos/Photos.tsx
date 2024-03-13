@@ -30,7 +30,7 @@ export const PhotoComponent: FC<Props> = ({ images, title }) => {
                 <div className="w-full relative">
                     <button onClick={() => changePhoto('prev')} className="absolute top-1/2 transform -translate-y-1/2 
                     left-2 z-10 rounded-full p-2 md:p-4 bg-[#47141e] flex flex-row items-center justify-center text-white"><ArrowBack/></button>
-                    <img className="w-full rounded-2xl" src={`https://img.asariweb.pl/normal/${images[currentPhoto].idi}`} alt={title}/>
+                    <img className="w-full rounded-2xl bg-cover" src={`https://img.asariweb.pl/normal/${images[currentPhoto].idi}`} alt={title}/>
                     <button onClick={() => changePhoto('next')} className="absolute top-1/2 transform -translate-y-1/2 
                     right-2 z-10 rounded-full p-2 md:p-4 bg-[#47141e] flex flex-row items-center justify-center text-white"><ArrowForward/></button>
                 </div>

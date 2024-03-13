@@ -40,13 +40,14 @@ export default async function Page(props: Props) {
           {response.map((item, index)=>{
             const dateCreated = new Date(item.dateCreated)
             return (
-                <Link href={`${routes.offers}/${item.slug}`} key={index} className="rounded-lg flex flex-col shadow-xl">
+                <Link href={`${routes.offers}/${item.slug}`} key={index} className="rounded-lg transition ease-in-out hover:shadow-2xl 
+                flex flex-col shadow-xl w-[20rem] md:w-[32rem]">
                   {item.images.map((image, index)=>{
                     if (index ===1) return (
-                      <img className="rounded-t-lg w-[20rem] md:w-[32rem]" key={index} src={`https://img.asariweb.pl/normal/${image.idi}`} alt="sdfgh" />
+                      <img className="rounded-t-lg w-full" key={index} src={`https://img.asariweb.pl/normal/${image.idi}`} alt="sdfgh" />
                       )
                     })}
-                    <div className="p-5 w-[20rem] md:w-[32rem]">
+                    <div className="p-5 w-full">
                       <div className="flex flex-row items-center gap-x-2.5 mx-auto mb-4">
                         <PlaceIcon/>
                         <div className="flex flex-row items-center flex-wrap gap-x-2.5">

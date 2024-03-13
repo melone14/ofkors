@@ -113,7 +113,7 @@ export const ContactFormNested = () => {
         <>
 
         <ThemeProvider theme={customTheme(outerTheme)}>
-          {!isSucces ? <form onSubmit={handleSubmit(onSubmit)}>
+          {!isSucces ? <form className="w-full px-5" onSubmit={handleSubmit(onSubmit)}>
           <div className="w-full flex flex-col gap-y-10">
             <div className="flex flex-col gap-x-10 gap-y-10 md:flex-row justify-between w-full">
             <Controller

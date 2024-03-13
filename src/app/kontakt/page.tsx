@@ -24,12 +24,12 @@ export default function Page() {
     return (
         <>
             <div className="contact-main-section mt-10">
-                <div className="flex items-center flex-col lg:flex-row justify-between m-0 md:m-10  py-10 px-20">
+                <div className="flex items-center flex-col lg:flex-row justify-between m-0 md:m-10 py-10 px-5 md:px-20">
                     <div className="flex flex-col items-center mb-10">
                         <h1 className="text-4xl font-bold mb-10 text-center">Kontakt</h1>
                         <h2 className="text-3xl text-center">Masz pytania? Skontaktuj się z nami</h2>
                     </div>
-                    <div className="w-[20rem] md:w-[40rem] rounded-md p-10 px-10 flex flex-col items-center">
+                    <div className="w-full md:w-[40rem] rounded-md p-10 px-0 flex flex-col items-center">
                         <h3 className="text-3xl font-bold mb-10">Napisz do Nas</h3>
                         <ContactForm/>
                     </div>

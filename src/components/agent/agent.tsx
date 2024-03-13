@@ -16,11 +16,11 @@ type Props = {
 export const AgentComponent:FC<Props> = ({agent, isOffer}) => {
     return (
         <>
-            <Link className="w-80 lg:w-96 py-10 text-white rounded-2xl bg-[#47141e]
+            <Link className="w-80 lg:w-full max-w-96 py-10 text-white rounded-2xl bg-[#47141e]
             flex flex-col items-center " href={`${routes.agents}/${agent.slug}`}>
             {isOffer ? <div className="text-3xl mb-5">Opiekun Oferty</div> : null}
                 <img className="h-52 w-52 rounded-full mb-5" src={agent?.img || ''} alt={agent?.name}/>
-            <div className="text-3xl mb-5">
+            <div className="text-3xl mb-5 mx-5 text-center">
                 {agent?.name}
             </div>
             <div className="text-2xl mb-5">

@@ -10,8 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         'ofkors-claret': '#47141e',
-        'ofkors-pink': '#ffc371',
-        'ofkors-orange': '#ff5f6d',
+        'ofkors-orange': '#ffc371',
+        'ofkors-pink': '#ff5f6d',
       }
     },
   },

@@ -5,7 +5,7 @@ import { Email, LocationOn, Phone, Facebook, Instagram  } from '@mui/icons-mater
 
 import OfkorsLogo from '@/images/logo/base_logo_transparent_background.png'
 
-import { MainMenu } from  '@/config'
+import { MainMenu, routes } from  '@/config'
 
 
 export const Footer = () => {
@@ -14,25 +14,39 @@ export const Footer = () => {
         <footer style={{ backgroundColor:'#47141E' }} className="w-full justify-between flex-wrap flex flex-col 
         sm:flex-row text-white p-10 md:px-20">
             <div className='mb-7 lg:mb-0'>
-                <Image className='h-auto w-96 sm:w-52 md:w-64 mb-5' src={OfkorsLogo} alt='Ofkors Logo'/>
+                <Link href={routes.home}>
+                    <Image className='h-auto w-96 sm:w-52 md:w-64 mb-5' src={OfkorsLogo} alt='Ofkors Logo'/>
+                </Link>
                 <div className='text-lg font-medium mb-8 md:text-2xl'>Dane Kontaktowe</div>
                 <div className='mb-2'>
-                    <Email className='mr-2.5'/>biuro@ofkoprs.pl
+                    <Link className='transition ease-in-out hover:text-[#ff5f6d]' href="mailto:biuro@ofkoprs.pl">
+                        <Email className='mr-2.5'/>biuro@ofkoprs.pl
+                    </Link>
                 </div>
-                <div className='mb-2'>
-                    <Phone className='mr-2.5'/>+48 111 222 333
+                <div className='flex flex-row items-center mb-2'>
+                    <Phone className='mr-2.5'/>
+                    <div className='flex flex-col'>
+                        <Link className='transition ease-in-out hover:text-[#ff5f6d]' href="tel:+48883288007">
+                            +48 883 288 007
+                        </Link>
+                        <Link className='transition ease-in-out hover:text-[#ff5f6d]' href="tel:+48883027007">
+                            +48 883 027 007
+                        </Link>
+                    </div>
                 </div>
-                <div className='flex flex-row items-center'>
+                <Link href='https://maps.app.goo.gl/UzjSHtDJddsT4i317' className='flex flex-row items-center transition ease-in-out hover:text-[#ff5f6d]'>
                     <LocationOn className='mr-2.5'/>
                     <div className='flex flex-col'>
                         <div>al. Konersera 30</div>
                         <div>00-000 Warszawa</div>
                     </div>
-                </div>
+                </Link>
                 <div className='text-lg font-medium my-8 md:text-2xl'>Znajdziesz nas na</div>
                 <div className='flex flex-row'>
-                    <a className='border-2 border-white flex justify-center items-center p-2 rounded-full mr-2.5' href='https://www.facebook.com/'><Facebook/></a>
-                    <a className='border-2 border-white flex justify-center items-center p-2 rounded-full mr-2.5' href='https://www.instagram.com/'><Instagram/></a>
+                    <a className='border-2 border-white flex justify-center transition ease-in-out
+                    items-center p-2 rounded-full mr-2.5 hover:bg-[#ff5f6d]' href='https://www.facebook.com/'><Facebook/></a>
+                    <a className='border-2 border-white flex justify-center transition ease-in-out
+                    items-center p-2 rounded-full mr-2.5 hover:bg-[#ff5f6d]' href='https://www.instagram.com/'><Instagram/></a>
                 </div>
             </div>
             <div className='mb-7 md:mb-0'>
@@ -40,7 +54,7 @@ export const Footer = () => {
                 <nav className='flex flex-col'>
                     {MainMenu.map((item, index)=>{
                         return (
-                            <Link className='mb-2.5' href={item.url} key={index}>
+                            <Link className='mb-2.5 transition ease-in-out hover:text-[#ff5f6d]' href={item.url} key={index}>
                                 {item.label}
                             </Link>
                         )

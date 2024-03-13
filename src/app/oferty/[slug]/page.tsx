@@ -60,7 +60,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                             <div className="px-10 pb-10">
                                 <h1 className="text-4xl font-bold mb-14">{response.headerAdvertisement}</h1>
                                 <div className="w-full flex flex-row flex-wrap items-center justify-around mb-14">
-                                {response.totalArea ?
+                                    {response.totalArea ?
                                     <div>
                                         <div className="flex flex-col gap-y-2.5 items-center">
                                             <CropIcon sx={{ color:"#47141e", fontSize:'3rem'}}/>

@@ -16,15 +16,15 @@ export const Header = () => {
                 <div style={{ backgroundColor:'#47141E' }} className='px-2 py-2 w-full justify-center items-center flex flex-col 
                 sm:flex-row-reverse sm:justify-between sm:items-start'>
                     <div className='flex items-start w-full h-auto justify-between sm:w-auto sm:justify-normal'>
-                        <div className='text-white flex items-center'>
+                        <div className='text-white flex items-center transition ease-in-out hover:text-[#ff5f6d]'>
+                            <Link className='flex items-center' href="tel:+48883027007">
                             <Phone className='mr-2'/>
-                            <Link href="tel:+48883027007">
                                 +48 883 027 007
                             </Link>
                         </div>
-                        <div className='text-white flex items-center sm:ml-5'>
+                        <div className='text-white flex items-center sm:ml-5 transition ease-in-out hover:text-[#ff5f6d]'>
+                            <Link className='flex items-center' href="mailto:biuro@ofkors.pl">
                             <Email className='mr-2'/>
-                            <Link href="mailto:biuro@ofkors.pl">
                                 biuro@ofkors.pl
                             </Link>
                         </div>

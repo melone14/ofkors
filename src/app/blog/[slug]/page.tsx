@@ -31,13 +31,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
             <div className="mb-20 ">{ArticleDate.getDate()} {months[ArticleDate.getMonth()].toUpperCase()} {ArticleDate.getFullYear()} | {response.post.author.name}</div>
             {response.post.main_photo ? <img className="w-[55rem] rounded-2xl pb-10" src={response.post.main_photo.img} alt={response.post.main_photo.alt} /> : null}
             <div className="w-full lg:w-[55rem] px-5 lg:px-0 text-xl mb-10" dangerouslySetInnerHTML={{ __html: response.post.content}}></div>
-            <Link className="flex flex-row items-center p-3 rounded-3xl border-gray-300 border-2 text-gray-300 mb-10" href={`${routes.blog}/kategoria/${response.post.category.slug}`}>
+            <Link className="flex flex-row transition ease-in-out hover:border-[#ff5f6d] hover:text-[#ff5f6d] items-center p-3 rounded-3xl border-gray-300 border-2 text-gray-300 mb-10" href={`${routes.blog}/kategoria/${response.post.category.slug}`}>
                 <LocalOfferIcon className="mr-2.5"/>
                 {response.post.category.name}
             </Link>
             <div className="w-full lg:w-[55rem] px-5 lg:px-0 flex flex-row items-center justify-between mb-10">
-                {response.adjacentPost.previous?.slug ? <Link className="bg-[#ff5f6d] p-2.5 text-white rounded-xl" href={`${routes.blog}/${response.adjacentPost.previous.slug}`}>Poprzedni Post</Link> : <div></div>}
-                {response.adjacentPost.next?.slug ? <Link className="bg-[#ff5f6d] p-2.5 text-white rounded-xl" href={`${routes.blog}/${response.adjacentPost.next.slug}`}>Następny Post</Link> : <div/>}
+                {response.adjacentPost.previous?.slug ? <Link className="bg-[#ff5f6d] transition ease-in-out hover:bg-[#ffc371] p-2.5 text-white rounded-xl" href={`${routes.blog}/${response.adjacentPost.previous.slug}`}>Poprzedni Post</Link> : <div></div>}
+                {response.adjacentPost.next?.slug ? <Link className="bg-[#ff5f6d] transition ease-in-out hover:bg-[#ffc371] p-2.5 text-white rounded-xl" href={`${routes.blog}/${response.adjacentPost.next.slug}`}>Następny Post</Link> : <div/>}
             </div>
         </>
     )
