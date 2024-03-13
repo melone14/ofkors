@@ -1,4 +1,5 @@
 import type { Metadata } from 'next' 
+import Link from 'next/link';
 
 import './style.css'
 import Image from 'next/image';
@@ -7,6 +8,7 @@ import BothAgents from "@/images/home/Ofkors - ph - anojszewska 12.jpg"
 
 import { SearchComponent } from "@/components/searchComponent/HomeSearch";
 import { TestimonialComponent } from '@/components/testimonial/Testimonial';
+import { routes } from '@/config';
 
  
 export const metadata: Metadata = {
@@ -38,6 +40,20 @@ export default function Home() {
             <div className='lg:max-w-96 text-2xl text-center'>Joanna Stojanowska,</div>
             <div className='lg:max-w-96 text-2xl text-center'>Dariusz Czajka</div>
           </div>
+        </div>
+      </div>
+      <div className='flex flex-col items-center w-full'>
+        <h3 className='text-4xl text-center pb-5'>Co robimy?</h3>
+        <div className='w-full flex flex-col items-center justify-center h-96 lg:h-[40rem]'>
+          <iframe className='video h-full' src="https://www.youtube.com/embed/79GX7Q3GzOY" title="RYNEK NIERUCHOMOŚCI: trendy 2024. Najem, ceny mieszkań, kredyt hipoteczny, inflacja | 3QQ TV" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        </div>
+        <div className='mt-5 mb-20 w-full flex flex-col md:flex-row items-center justify-center gap-5'>
+          <div className='text-2xl'>
+            Chcesz wiedzieć więcej?
+          </div>
+          <Link className='text-center text-white px-5 py-2.5 bg-[#47141e] text-2xl rounded-xl' href={routes.aboutUs}>
+            O nas
+          </Link>
         </div>
       </div>
       <TestimonialComponent />
