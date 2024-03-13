@@ -24,8 +24,14 @@ export default async function Page ({ params }: { params: { slug: string } }) {
                 <img className="w-80 rounded-xl" src={agent?.full_img || undefined} alt={agent.name}/>
                 <h1 className="text-2xl font-bold my-5">{response.agent.name}</h1>
                 <h2 className="text-2xl mb-5">{response.agent.bio}</h2>
-                <div className="text-xl mb-5 flex flex-row items-center"><Phone className="mr-2.5"/> +48 {response.agent.phone}</div>
-                <div className="text-xl flex flex-row items-center mb-5"><Email className="mr-2.5"/>{response.agent.email}</div>
+                <div className="text-xl mb-5 flex flex-row items-center"><Phone className="mr-2.5"/>
+                <Link href={`tel:+48${response.agent.phone!.replace(/ /g, "")}`}>
+                +48 {response.agent.phone}
+                </Link></div>
+                <div className="text-xl flex flex-row items-center mb-5"><Email className="mr-2.5"/>
+                <Link href={`mailto:${response.agent.email}`}>
+                {response.agent.email}
+                </Link></div>
                 <div className="w-full flex flex-row gap-x-5 justify-center">{agent.urls.map((item, index)=>{
                   return (
                     <SocialIconComponent key={index} item={item}/>

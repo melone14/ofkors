@@ -120,7 +120,7 @@ export const SearchComponent = () => {
         <div className="w-full flex flex-col gap-y-5">
             <div className="flex flex-col md:flex-row w-full justify-between items-center gap-x-5 gap-y-5">
             <div className="flex flex-col md:flex-row w-full justify-between items-center gap-x-5 max-w-4xl gap-y-5">
-                <FormControl fullWidth>
+                <FormControl className="w-full lg:w-48">
                     <InputLabel id="objectType">Rodzaj obiektu</InputLabel>
                     <Select
                         labelId="objectType"
@@ -139,7 +139,7 @@ export const SearchComponent = () => {
                         <MenuItem value={'obiekt'}>Obiekt</MenuItem>
                     </Select>
                 </FormControl>
-                <FormControl fullWidth>
+                <FormControl className="w-full lg:w-48">
                     <InputLabel id="sellingType">Rodzaj transkacji</InputLabel>
                     <Select
                     labelId="sellingType"
@@ -155,24 +155,10 @@ export const SearchComponent = () => {
                         <MenuItem value={'wynajem'}>Wynajem</MenuItem>
                     </Select>
                 </FormControl>
-                <FormControl fullWidth>
-                    <InputLabel id="rentingType">Rodzaj rynku</InputLabel>
-                    <Select
-                    labelId="rentingType"
-                    id="rentingType"
-                    value={rentingType}
-                    label="Rodzaj rynku"
-                    onChange={(event: any)=> {
-                        setRentingType(event.target.value)
-                    }}
-                    >
-                        <MenuItem value={'wszystko'}>Wszystko</MenuItem>
-                        <MenuItem value={'pierwotny'}>Pierwotny</MenuItem>
-                        <MenuItem value={'wtorny'}>Wtórny</MenuItem>
-                        </Select>
-                    </FormControl>
+                <div className="w-full lg:w-64">
                     <TextField 
-                        fullWidth id="location-input" 
+                        fullWidth
+                        id="location-input"
                         label="Miejscowośc lub dzielnica" 
                         variant="outlined"
                         value={location}
@@ -180,6 +166,7 @@ export const SearchComponent = () => {
                             setlocation(event.target.value)
                         }}>
                     </TextField>
+                </div>
             </div>
                 <Button 
                     className="px-5 w-full md:w-auto" 

@@ -155,22 +155,6 @@ export const OfferSearchComponent = () => {
                         <MenuItem value={'wynajem'}>Wynajem</MenuItem>
                     </Select>
                 </FormControl>
-                <FormControl fullWidth>
-                    <InputLabel id="rentingType">Rodzaj rynku</InputLabel>
-                    <Select
-                    labelId="rentingType"
-                    id="rentingType"
-                    value={rentingType}
-                    label="Rodzaj rynku"
-                    onChange={(event: any)=> {
-                        setRentingType(event.target.value)
-                    }}
-                    >
-                        <MenuItem value={'wszystko'}>Wszystko</MenuItem>
-                        <MenuItem value={'pierwotny'}>Pierwotny</MenuItem>
-                        <MenuItem value={'wtorny'}>Wtórny</MenuItem>
-                        </Select>
-                    </FormControl>
                     <TextField 
                         fullWidth id="location-input" 
                         label="Miejscowośc lub dzielnica" 

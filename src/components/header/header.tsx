@@ -18,11 +18,15 @@ export const Header = () => {
                     <div className='flex items-start w-full h-auto justify-between sm:w-auto sm:justify-normal'>
                         <div className='text-white flex items-center'>
                             <Phone className='mr-2'/>
-                            +48 509 627 217
+                            <Link href="tel:+48883027007">
+                                +48 883 027 007
+                            </Link>
                         </div>
                         <div className='text-white flex items-center sm:ml-5'>
                             <Email className='mr-2'/>
-                            biuro@ofkors.pl
+                            <Link href="mailto:biuro@ofkors.pl">
+                                biuro@ofkors.pl
+                            </Link>
                         </div>
                     </div>
                     <Link href={'/'}>
