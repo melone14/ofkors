@@ -37,8 +37,8 @@ export const Footer = () => {
                 <Link href='https://maps.app.goo.gl/UzjSHtDJddsT4i317' className='flex flex-row items-center transition ease-in-out hover:text-[#ff5f6d]'>
                     <LocationOn className='mr-2.5'/>
                     <div className='flex flex-col'>
-                        <div>al. Konersera 30</div>
-                        <div>00-000 Warszawa</div>
+                        <div>Plac Konesera 12/126</div>
+                        <div>03-736 Warszawa</div>
                     </div>
                 </Link>
                 <div className='flex flex-row mt-8'>

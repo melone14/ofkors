@@ -8,6 +8,7 @@ import BothAgents from "@/images/home/Ofkors - ph - anojszewska 12.jpg"
 
 import { SearchComponent } from "@/components/searchComponent/HomeSearch";
 import { TestimonialComponent } from '@/components/testimonial/Testimonial';
+import { ContactSection } from '@/components/contactSecion/ContactSection';
 import { routes } from '@/config';
 
  
@@ -42,18 +43,23 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='flex flex-col items-center w-full'>
-        <h3 className='text-4xl text-center pb-5'>Co robimy?</h3>
-        <div className='mt-5 mb-20 w-full flex flex-col md:flex-row items-center justify-center gap-5'>
-          <div className='text-2xl'>
-            Chcesz wiedzieć więcej?
+      <div className='flex flex-col lg:flex-row-reverse gap-x-10 items-center my-20'>
+        <div className='w-full lg:w-[35rem] px-5 lg:px-0 flex flex-col items-center'>
+          <Image className='w-full rounded-xl mx-5 lg:mx-0 mb-5 lg:mb-0' src={BothAgents} alt="Two Agents" />
+        </div>
+        <div className='p-5 lg:p-0 h-full'>
+          <div className='w-full h-full flex flex-col items-center justify-center gap-5'>
+            <div className='text-2xl'>
+              Chcesz wiedzieć więcej?
+            </div>
+            <Link className='text-center text-white px-5 py-2.5 bg-[#47141e] text-2xl rounded-xl' href={routes.aboutUs}>
+              O nas
+            </Link>
           </div>
-          <Link className='text-center text-white px-5 py-2.5 bg-[#47141e] text-2xl rounded-xl' href={routes.aboutUs}>
-            O nas
-          </Link>
         </div>
       </div>
       <TestimonialComponent />
+      <ContactSection/>
     </>
   );
 }

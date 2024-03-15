@@ -14,7 +14,7 @@ export default async function BlogList() {
 
     return (
         <>
-            <h1 className="mt-20 mb-10 text-6xl text-medium text-center">Z naszego Bloga</h1>
+            <h1 className="mt-20 mb-10 text-6xl text-medium text-center hidden">Z naszego Bloga</h1>
             {response.posts.map((post, index)=>{
                 return (
                     <BlogCard key={index} article={post} />

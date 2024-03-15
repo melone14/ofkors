@@ -37,7 +37,6 @@ export const getBlogPostsCategoryList = async (slug: string): Promise<BlogPostsL
 
 export const getRealEstateList = async (props: SerachParams): Promise<RealEstateObject[]> => { 
 
-  console.log(props)
 
   const transactionType = props?.typSprzedazy === 'wszystko' ? null : props?.typSprzedazy;
   const objectType = props?.typObiektu === 'wszystko' ? null : props?.typObiektu;
@@ -76,7 +75,7 @@ export const getRealEstateList = async (props: SerachParams): Promise<RealEstate
   if (rynekType) { params.append('rynekType', rynekType === 'pierwotny' ? 'Primary' : 'Secondary') }
   if (transactionType) { params.append('transactionType', transactionType === 'sprzedaz' ? 'sell' : 'rent') }
   if (objectType) { params.append('objectType', objectTypeEn!) }
-  console.log(params.toString())
+
 
 
   const response = await fetch(`${API_BASE_URL}real_estate/offer_list/?${params.toString()}`, {next : { revalidate: 0 }})

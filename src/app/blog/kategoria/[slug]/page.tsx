@@ -12,7 +12,7 @@ export default async function BlogCategoryList({ params }: { params: { slug: str
 
     return (
         <>
-            <h1 className="mt-20 text-6xl text-medium">Z naszego Bloga</h1>
+            <h1 className="mt-20 text-6xl text-medium hidden">Z naszego Bloga</h1>
             {response.posts.map((post, index)=>{
                 return (
                     <BlogCard key={index} article={post} />

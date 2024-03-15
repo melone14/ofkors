@@ -16,9 +16,8 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1 className="my-20 mb-5 text-6xl text-medium text-center">Sprzedaj z Nami</h1>
-      <h2 className="text-3xl mb-20">Oczywiste są dla nas</h2>
-
+      <h1 className="my-20 mb-5 text-6xl text-medium text-center hidden">Sprzedaj z Nami</h1>
+      <h2 className="text-5xl mb-20 text-center lg:mt-5">Oczywiste są dla nas</h2>
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 mb-20 md:mb-10 md:px-5">
         <div className="flex flex-col items-center justify-center gap-5 text-white w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-[#47141e] shadow-2xl">
           <div><HandshakeIcon sx={{ fontSize: "8rem"}}/></div>
