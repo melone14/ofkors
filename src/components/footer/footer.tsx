@@ -41,8 +41,7 @@ export const Footer = () => {
                         <div>00-000 Warszawa</div>
                     </div>
                 </Link>
-                <div className='text-lg font-medium my-8 md:text-2xl'>Znajdziesz nas na</div>
-                <div className='flex flex-row'>
+                <div className='flex flex-row mt-8'>
                     <a className='border-2 border-white flex justify-center transition ease-in-out
                     items-center p-2 rounded-full mr-2.5 hover:bg-[#ff5f6d]' href='https://www.facebook.com/'><Facebook/></a>
                     <a className='border-2 border-white flex justify-center transition ease-in-out

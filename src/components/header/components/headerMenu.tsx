@@ -1,7 +1,9 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
+
+import { usePathname } from 'next/navigation'
 
 import { IconButton, Drawer } from "@mui/material"
 import { Menu, Close } from "@mui/icons-material"
@@ -10,7 +12,13 @@ import { MainMenu } from "@/config"
 
 export const HeaderMenu = () => {
 
+    const pathname = usePathname()
+    
     const [menuOpen, setMenuOpen] = useState<boolean>(false)
+    
+    useEffect(()=>{
+        setMenuOpen(false)
+    }, [pathname])
 
     return (
         <>

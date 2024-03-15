@@ -34,7 +34,8 @@ export default async function Page(props: Props) {
   
     return (
       <>
-        <h1 className="my-20 text-6xl text-medium">Nasze oferty</h1>
+        <h1 className="hidden text-6xl text-medium">Nasze oferty</h1>
+        <div className="mt-10"></div>
         <OfferSearchComponent/>
         <div className="flex flex-row flex-wrap w-full gap-x-10 gap-y-10 px-10 justify-center my-10">
           {response.map((item, index)=>{

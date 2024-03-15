@@ -20,13 +20,13 @@ export default function Home() {
   return (
     <>
       <div className="-mt-16 mb-10 w-full home-main-section flex flex-col-reverse items-center pb-10">
-        <div style={{ backgroundColor: 'rgba(71, 20, 30, 0.7)' }} className='mx-2 md:px-5 lg:mx-auto px-5 md:px-20 py-10 rounded-2xl text-white hidden md:block'>
-          <h1 className='text-3xl text-white font-bold mb-10 text-center'>Znajdź swoją wymarzoną nieruchomość</h1>
+        <div style={{ backgroundColor: 'rgba(71, 20, 30, 0.7)' }} className='mx-2 md:px-5 lg:mx-auto px-5 md:px-20 py-10 rounded-2xl text-white hidden md:block md:bg-[#47141e]'>
+          <h1 className='text-3xl text-white font-bold mb-10 text-center'>Sprawdź nasze aktualne oferty</h1>
           <SearchComponent />
         </div>
       </div>
       <div style={{ backgroundColor: 'rgba(71, 20, 30, 0.7)' }} className='mx-2 md:px-5 lg:mx-auto px-5 md:px-20 py-10 rounded-2xl text-white block md:hidden'>
-          <div className='text-3xl text-white font-bold mb-10 text-center'>Znajdź swoją wymarzoną nieruchomość</div>
+          <div className='text-3xl text-white font-bold mb-10 text-center'>Sprawdź nasze aktualne oferty</div>
           <SearchComponent />
         </div>
       <div className='flex flex-col lg:flex-row gap-x-10 items-center my-20'>
@@ -34,7 +34,7 @@ export default function Home() {
           <Image className='w-full rounded-xl mx-5 lg:mx-0 mb-5 lg:mb-0' src={BothAgents} alt="Two Agents" />
         </div>
         <div className='p-5 lg:p-0'>
-          <p className='lg:max-w-96 text-2xl mb-5 text-center'>OFKORS NIERUCHOMOŚCI powstało ze wspólnej pasji do nieruchomości. Stworzyliśmy biuro z którego usług sami chcielibyśmy skorzystać. Tylko tyle i aż tyle. Dla nas każdy Klient, a tym samym każda nieruchomość to oddzielna historia, której częścią stajemy się również my. Jesteśmy dla ludzi, którzy chcą powierzyć ten kawałek swojego życia zespołowi doświadczonych, zaangażowanych oraz skutecznych doradców.</p>
+          <p className='lg:max-w-96 text-2xl mb-5 text-justify'>OFKORS NIERUCHOMOŚCI powstało ze wspólnej pasji do nieruchomości. Stworzyliśmy biuro z którego usług sami chcielibyśmy skorzystać. Tylko tyle i aż tyle. Dla nas każdy Klient, a tym samym każda nieruchomość to oddzielna historia, której częścią stajemy się również my. Jesteśmy dla ludzi, którzy chcą powierzyć ten kawałek swojego życia zespołowi doświadczonych, zaangażowanych oraz skutecznych doradców.</p>
           <p className='lg:max-w-96 text-2xl mb-5 text-center'>Jesteśmy ciekawi, jaką historię Ty nam opowiesz.</p>
           <div className='lg:max-w-96 flex flex-col items-center'>
             <div className='lg:max-w-96 text-2xl text-center'>Joanna Stojanowska,</div>
@@ -44,9 +44,6 @@ export default function Home() {
       </div>
       <div className='flex flex-col items-center w-full'>
         <h3 className='text-4xl text-center pb-5'>Co robimy?</h3>
-        <div className='w-full flex flex-col items-center justify-center h-96 lg:h-[40rem]'>
-          <iframe className='video h-full' src="https://www.youtube.com/embed/79GX7Q3GzOY" title="RYNEK NIERUCHOMOŚCI: trendy 2024. Najem, ceny mieszkań, kredyt hipoteczny, inflacja | 3QQ TV" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-        </div>
         <div className='mt-5 mb-20 w-full flex flex-col md:flex-row items-center justify-center gap-5'>
           <div className='text-2xl'>
             Chcesz wiedzieć więcej?

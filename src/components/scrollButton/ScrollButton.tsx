@@ -14,7 +14,7 @@ export const ScrollButton = () => {
       };
 
     return (
-        <div onClick={scrollToTop} id="scrollup" className="fixed bottom-4 right-4 p-5 bg-[#ffc371] transition ease-in-out hover:bg-[#ff5f6d]
+        <div onClick={scrollToTop} id="scrollup" className="fixed z-10 bottom-4 right-4 p-5 bg-[#ffc371] transition ease-in-out hover:bg-[#ff5f6d]
         flex flex-row justify-center items-center rounded-full cursor-pointer shadow-lg">
             <ExpandLessIcon sx={{ color: 'white' }} />
         </div>

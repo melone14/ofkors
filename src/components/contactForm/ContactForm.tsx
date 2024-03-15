@@ -100,6 +100,7 @@ export const ContactFormNested = () => {
 
 
   const onSubmit = async (data: IFormInput) => {
+    console.log(data)
     const response = await mutation.mutateAsync(data)
     if (response.status === 201) {
       setIsSucces(true)
