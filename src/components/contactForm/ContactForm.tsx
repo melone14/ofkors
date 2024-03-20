@@ -76,12 +76,21 @@ const customTheme = (outerTheme: Theme) =>
     event.preventDefault()
  
     const formData = new FormData(event.currentTarget)
+
+    const qs = {
+      first_name: formData.get('first_name'),
+      last_name: formData.get('last_name'),
+      email: formData.get('email'),
+      phone_number: formData.get('phone_number'),
+      message: formData.get('message'),
+    }
+
     const response = await fetch(`${API_BASE_URL}blog/ofkors-form-create/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: formData
+      body: JSON.stringify(qs)
     })
  
     // Handle response if necessary
@@ -115,6 +124,7 @@ const customTheme = (outerTheme: Theme) =>
         <>
         <ThemeProvider theme={customTheme(outerTheme)}>
           {!isSuccess ? <form className="w-full px-5" onSubmit={onSubmit}>
+            <input type="text" name="dskjhf" />
           <div className="w-full flex flex-col gap-y-10">
             <div className="flex flex-col gap-x-10 gap-y-10 md:flex-row justify-between w-full">
                 <TextField name="first_name" sx={{ color: '#FFFFFF'}} variant="standard" label="Imię"/>
