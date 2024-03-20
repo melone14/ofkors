@@ -1,8 +1,6 @@
 'use client'
 
-import { useForm, Controller } from "react-hook-form";
 import { useState } from "react";
-import { useMutation, QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TextField, Button } from "@mui/material"
 import { outlinedInputClasses } from '@mui/material/OutlinedInput';
 import { createTheme, ThemeProvider, Theme, useTheme } from '@mui/material/styles';
@@ -70,10 +68,16 @@ const customTheme = (outerTheme: Theme) =>
     message: string;
   }
 
-export const ContactFormNested = () => {
+export const ContactForm = () => {
 
 
   const [isSucces, setIsSucces] = useState(false);
+
+  const [first_name, setfirst_name] = useState('');
+  const [last_name, setlast_name] = useState('');
+  const [email, setemail] = useState('');
+  const [phone_number, setphone_number] = useState('');
+  const [message, setmessage] = useState('');
   
   const query = async (data: IFormInput) =>{
     return fetch(`${API_BASE_URL}blog/ofkors-form-create/`, {
@@ -85,28 +89,9 @@ export const ContactFormNested = () => {
     })
   }
 
-  const mutation = useMutation({
-    mutationFn: (data: IFormInput)=> query(data)
-  })
-  
-  const {
-    handleSubmit,
-    formState: { errors },
-    control
-  } = useForm<IFormInput>({
-    defaultValues: {
-      first_name: "",
-      last_name: "",
-      phone_number: "",
-      email: "",
-      message: "",
-    },
-  })
-
 
   const onSubmit = async (data: IFormInput) => {
-    console.log(data)
-    const response = await mutation.mutateAsync(data)
+    const response = await query(data)
     if (response.status === 201) {
       setIsSucces(true)
     }
@@ -119,58 +104,36 @@ export const ContactFormNested = () => {
         <>
 
         <ThemeProvider theme={customTheme(outerTheme)}>
-          {!isSucces ? <form className="w-full px-5" onSubmit={handleSubmit(onSubmit)}>
+          {!isSucces ? <form className="w-full px-5" onSubmit={async ()=> {
+            await onSubmit(
+              {first_name: first_name,
+              last_name: last_name,
+              phone_number: phone_number,
+              email: email,
+              message:message}
+            )
+          }}>
           <div className="w-full flex flex-col gap-y-10">
             <div className="flex flex-col gap-x-10 gap-y-10 md:flex-row justify-between w-full">
-            <Controller
-              name="first_name"
-              control={control}
-              render={({field})=> {
-                return (
-                  <TextField {...field} sx={{ color: '#FFFFFF'}} variant="standard" label="Imię"/>
-                  )
-                }}
-                />
-            <Controller
-              name="last_name"
-              control={control}
-              render={({field})=> {
-                return (
-                  <TextField {...field} sx={{ color: '#FFFFFF'}} variant="standard" label="Nazwisko"/>
-                  )
-                }}
-                />
+                <TextField value={first_name} onChange={(event)=> {
+                  setfirst_name(event.target.value)
+                }} sx={{ color: '#FFFFFF'}} variant="standard" label="Imię"/>
+                <TextField value={last_name} onChange={(event)=> {
+                  setlast_name(event.target.value)
+                }} sx={{ color: '#FFFFFF'}} variant="standard" label="Nazwisko"/>
             </div>
             <div className="flex flex-col gap-x-10 gap-y-10 md:flex-row justify-between w-full">
-            <Controller
-              name="email"
-              control={control}
-              render={({field})=> {
-                return (
-                  <TextField {...field} sx={{ color: '#FFFFFF'}} variant="standard" label="Email"/>
-                )
-              }}
-              />
-            <Controller
-              name="phone_number"
-              control={control}
-              render={({field})=> {
-                return (
-                  <TextField  {...field} variant="standard" label="Numer Telefonu"/>
-                  )
-                }}
-                />
+                <TextField value={email} onChange={(event)=> {
+                  setemail(event.target.value)
+                }} sx={{ color: '#FFFFFF'}} variant="standard" label="Email"/>
+                <TextField value={phone_number} onChange={(event)=> {
+                  setphone_number(event.target.value)
+                }} variant="standard" label="Numer Telefonu"/>
             </div>
-            <Controller
-              name="message"
-              control={control}
-              render={({field})=> {
-                return (
-                  <TextField {...field} sx={{ color: '#FFFFFF'}} fullWidth variant="standard" multiline
-                  label="Wiadomość"/>
-                )
-              }}
-            />
+                <TextField value={message} onChange={(event)=> {
+                  setmessage(event.target.value)
+                }} sx={{ color: '#FFFFFF'}} fullWidth variant="standard" multiline
+                label="Wiadomość"/>
             <Button
                 type="submit"
                 className="px-10" 
@@ -184,14 +147,4 @@ export const ContactFormNested = () => {
 
         </>
     )
-}
-
-export const ContactForm = () => {
-  const queryClient = new QueryClient()
-
-  return (
-    <QueryClientProvider client={queryClient}>
-      <ContactFormNested />
-    </QueryClientProvider>
-  )
 }
