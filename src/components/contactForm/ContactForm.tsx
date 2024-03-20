@@ -3,7 +3,6 @@
 import { useForm, Controller } from "react-hook-form";
 import { useState } from "react";
 import { useMutation, QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import axios from "axios";
 import { TextField, Button } from "@mui/material"
 import { outlinedInputClasses } from '@mui/material/OutlinedInput';
 import { createTheme, ThemeProvider, Theme, useTheme } from '@mui/material/styles';
@@ -77,7 +76,13 @@ export const ContactFormNested = () => {
   const [isSucces, setIsSucces] = useState(false);
   
   const query = async (data: IFormInput) =>{
-    return axios.post(`${API_BASE_URL}blog/ofkors-form-create/`, data)
+    return fetch(`${API_BASE_URL}blog/ofkors-form-create/`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
   }
 
   const mutation = useMutation({
