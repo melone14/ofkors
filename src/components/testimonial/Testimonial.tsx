@@ -29,12 +29,9 @@ export const Testimonial = ({currentOpinion} : {currentOpinion: any}) => {
                         color: '#47141e',
                     },}} readOnly value={currentOpinion.rating} /></div>
                     <div className="max-w-[20rem] md:max-w-[30rem] text-xl text-center min-h-40">&apos;{currentOpinion.descrition}&apos;</div>
-                    <div className="flex flex-row gap-x-5 items-center">
-                        <Image className="w-16 h-16 rounded-full" src={Agents} alt={currentOpinion.name} />
-                        <div className="h-16 flex flex-col items-start justify-between">
+                    <div className="flex flex-col gap-y-5 items-center">
                             <div>{currentOpinion.name}</div>
                             <div>{currentOpinion.jobRole}</div>
-                        </div>
                     </div>
                 </div>
             </div>

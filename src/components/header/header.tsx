@@ -34,10 +34,10 @@ export const Header = () => {
                         {/* basic w-90 */}
                     </Link>
                 </div>
-                <nav className='w-full h-16 hidden text-black flex flex-row justify-end gap-x-5 items-center lg:flex'>
+                <nav className='w-full h-16 hidden text-black flex flex-row justify-end gap-x-5 items-start lg:flex'>
                     {MainMenu.map((item, index)=> {
                         return (
-                            <Link className='transition ease-in-out mr-5 text-2xl font-medium text-[#47141e] hover:text-[#ff5f6d]' href={item.url} key={index}>
+                            <Link className='transition ease-in-out mr-5 text-2xl font-medium text-[#47141e] hover:text-[#ff5f6d] mt-1' href={item.url} key={index}>
                                 {item.label}
                             </Link>
                         )

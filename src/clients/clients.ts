@@ -72,10 +72,9 @@ export const getRealEstateList = async (props: SerachParams): Promise<RealEstate
   if (areaMax) { params.append('areaMax', areaMax) }
   if (areaMin) { params.append('areaMin', areaMin) }
   if (location) { params.append('location', location) }
-  if (rynekType) { params.append('rynekType', rynekType === 'pierwotny' ? 'Primary' : 'Secondary') }
+  // if (rynekType) { params.append('rynekType', rynekType === 'pierwotny' ? 'Primary' : 'Secondary') }
   if (transactionType) { params.append('transactionType', transactionType === 'sprzedaz' ? 'sell' : 'rent') }
   if (objectType) { params.append('objectType', objectTypeEn!) }
-
 
 
   const response = await fetch(`${API_BASE_URL}real_estate/offer_list/?${params.toString()}`, {next : { revalidate: 0 }})

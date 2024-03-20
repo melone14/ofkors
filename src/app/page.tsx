@@ -38,7 +38,7 @@ export default function Home() {
           <p className='lg:max-w-96 text-xl mb-5 text-justify'>OFKORS NIERUCHOMOŚCI powstało ze wspólnej pasji do nieruchomości. Stworzyliśmy biuro z którego usług sami chcielibyśmy skorzystać. Tylko tyle i aż tyle. Dla nas każdy Klient, a tym samym każda nieruchomość to oddzielna historia, której częścią stajemy się również my. Jesteśmy dla ludzi, którzy chcą powierzyć ten kawałek swojego życia zespołowi doświadczonych, zaangażowanych oraz skutecznych doradców.</p>
           <p className='lg:max-w-96 text-xl mb-5 text-center'>Jesteśmy ciekawi, jaką historię Ty nam opowiesz.</p>
           <div className='lg:max-w-96 flex flex-col items-center'>
-            <div className='lg:max-w-96 text-xl text-center'>Joanna Stojanowska,</div>
+            <div className='lg:max-w-96 text-xl text-center'>Joanna Stojanowska</div>
             <div className='lg:max-w-96 text-xl text-center'>Dariusz Czajka</div>
           </div>
         </div>

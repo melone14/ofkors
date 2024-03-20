@@ -19,7 +19,7 @@ export const Footer = () => {
                 </Link>
                 <div className='mb-2'>
                     <Link className='transition ease-in-out hover:text-[#ff5f6d]' href="mailto:biuro@ofkoprs.pl">
-                        <Email className='mr-2.5'/>biuro@ofkoprs.pl
+                        <Email className='mr-2.5'/>biuro@ofkors.pl
                     </Link>
                 </div>
                 <div className='flex flex-row items-center mb-2'>
@@ -59,8 +59,8 @@ export const Footer = () => {
                 </nav>
             </div>
             <div>
-                <h3 className='text-lg font-medium mb-8 md:text-2xl'>Ofkors nieruchomości sp. z o. o.</h3>
-                <p className='max-w-96 sm:max-w-60 md:max-w-96'>Nasz agencja nieruchomości zajmuje się profesjonalną sprzedażą, zakupem oraz wynajmem nieruchomości. Działamy na terenie Warszawy i miejscowości podwarszawskich oraz mamy szerokie kontakty wśród współpracujących agencji w całej Polsce. Jesteśmy gwarancją jakości i skuteczności. Dzięki naszemu zaangażowaniu, dobrym relacjom oraz etyce pracy, większość naszych ofert pochodzi z poleceń od zadowolonych klientów.</p>
+                <h3 className='text-lg font-medium mb-8 md:text-2xl'>Ofkors Nieruchomości sp. z o. o.</h3>
+                <p className='max-w-96 sm:max-w-60 md:max-w-96 text-justify'>Nasz agencja nieruchomości zajmuje się profesjonalną sprzedażą, zakupem oraz wynajmem nieruchomości. Działamy na terenie Warszawy i miejscowości podwarszawskich oraz mamy szerokie kontakty wśród współpracujących agencji w całej Polsce. Jesteśmy gwarancją jakości i skuteczności. Dzięki naszemu zaangażowaniu, dobrym relacjom oraz etyce pracy, większość naszych ofert pochodzi z poleceń od zadowolonych klientów.</p>
             </div>
         </footer>
     )

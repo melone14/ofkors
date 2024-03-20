@@ -31,12 +31,15 @@ type Props = {
 export default async function Page(props: Props) {
     const response = await getRealEstateList(props.searchParams);
 
+
   
     return (
       <>
         <h1 className="hidden text-6xl text-medium">Nasze oferty</h1>
         <div className="mt-10"></div>
-        <OfferSearchComponent/>
+        <div className='mx-2 md:px-5 lg:mx-auto px-5 md:px-20 py-10 rounded-2xl text-white w-full lg:w-auto'>
+          <OfferSearchComponent/>
+        </div>
         <div className="flex flex-row flex-wrap w-full gap-x-10 gap-y-10 px-10 justify-center my-10">
           {response.map((item, index)=>{
             const dateCreated = new Date(item.dateCreated)

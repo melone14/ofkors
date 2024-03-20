@@ -7,7 +7,31 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import FormControl from '@mui/material/FormControl';
 import { Button, Select, MenuItem, InputLabel, TextField } from "@mui/material";
 import { routes } from "@/config";
-import { Value } from "sass";
+import { styled } from '@mui/material/styles';
+import { ButtonProps } from '@mui/material/Button';
+
+const OfkorsButton = styled(Button)({
+    boxShadow: 'none',
+    textTransform: 'none',
+    fontSize: 16,
+    height: '56px',
+    border: '1px solid',
+    lineHeight: 1.5,
+    'background-color': '#ff5f6d',
+    borderColor: '#ff5f6d',
+    '&:hover': {
+      backgroundColor: '#ffc371',
+      borderColor: '#ffc371',
+      boxShadow: 'none',
+    },
+    '&:active': {
+        boxShadow: 'none',
+        backgroundColor: '#ffc371',
+        borderColor: '#ffc371',
+    },
+  '&:focus': {
+  },
+  });
 
 const theme = createTheme({
     components: {
@@ -165,15 +189,14 @@ export const OfferSearchComponent = () => {
                         }}>
                     </TextField>
             </div>
-                <Button 
-                    className="px-5 w-full md:w-auto" 
-                    style={{ backgroundColor:"#ff5f6d", height:'56px' }} 
+                <OfkorsButton 
+                    className="px-5 w-full md:w-auto bg-[#ff5f6d]" 
                     variant="contained"
                     onClick={()=>{
                         setshowFilters((state)=>!state)
-                    }}>Filtry</Button>
+                    }}>Filtry</OfkorsButton>
                 <Link className="w-full md:w-auto" href={urlValue}>
-                    <Button className="px-5 w-full md:w-auto" style={{ backgroundColor:"#ff5f6d", height:'56px' }} variant="contained">Szukaj</Button>
+                    <OfkorsButton className="px-5 w-full md:w-auto bg-[#ff5f6d]" variant="contained">Szukaj</OfkorsButton>
                 </Link>
             </div>
             {showFilters ? 
