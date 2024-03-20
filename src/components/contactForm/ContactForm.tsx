@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { TextField, Button } from "@mui/material"
 import { outlinedInputClasses } from '@mui/material/OutlinedInput';
 import { createTheme, ThemeProvider, Theme, useTheme } from '@mui/material/styles';
@@ -67,17 +67,30 @@ const customTheme = (outerTheme: Theme) =>
     email: string;
     message: string;
   }
+  
+  export const ContactForm = () => {
+    
+    const [isSuccess, setIsSucces] = useState(false)
 
-export const ContactForm = () => {
+    async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+ 
+    const formData = new FormData(event.currentTarget)
+    const response = await fetch(`${API_BASE_URL}blog/ofkors-form-create/`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: formData
+    })
+ 
+    // Handle response if necessary
+    const data = await response.json()
 
-
-  const [isSucces, setIsSucces] = useState(false);
-
-  const [first_name, setfirst_name] = useState('');
-  const [last_name, setlast_name] = useState('');
-  const [email, setemail] = useState('');
-  const [phone_number, setphone_number] = useState('');
-  const [message, setmessage] = useState('');
+  if (response.ok) {
+    setIsSucces(true)
+  }
+  }
   
   const query = async (data: IFormInput) =>{
     return fetch(`${API_BASE_URL}blog/ofkors-form-create/`, {
@@ -90,46 +103,28 @@ export const ContactForm = () => {
   }
 
 
-  const onSubmit = async (data: IFormInput) => {
-    const response = await query(data)
-    if (response.status === 201) {
-      setIsSucces(true)
-    }
-  }
+  // const onSubmit = async (data: IFormInput) => {
+  //   const response = await query(data)
+  //   if (response.status === 201) {
+  //     setIsSucces(true)
+  //   }
+  // }
     const outerTheme = useTheme();
 
     return (
         <>
         <ThemeProvider theme={customTheme(outerTheme)}>
-          {!isSucces ? <form className="w-full px-5" onSubmit={async ()=> {
-            await onSubmit(
-              {first_name: first_name,
-              last_name: last_name,
-              phone_number: phone_number,
-              email: email,
-              message:message}
-            )
-          }}>
+          {!isSuccess ? <form className="w-full px-5" onSubmit={onSubmit}>
           <div className="w-full flex flex-col gap-y-10">
             <div className="flex flex-col gap-x-10 gap-y-10 md:flex-row justify-between w-full">
-                <TextField value={first_name} onChange={(event)=> {
-                  setfirst_name(event.target.value)
-                }} sx={{ color: '#FFFFFF'}} variant="standard" label="Imię"/>
-                <TextField value={last_name} onChange={(event)=> {
-                  setlast_name(event.target.value)
-                }} sx={{ color: '#FFFFFF'}} variant="standard" label="Nazwisko"/>
+                <TextField name="first_name" sx={{ color: '#FFFFFF'}} variant="standard" label="Imię"/>
+                <TextField name="last_name" sx={{ color: '#FFFFFF'}} variant="standard" label="Nazwisko"/>
             </div>
             <div className="flex flex-col gap-x-10 gap-y-10 md:flex-row justify-between w-full">
-                <TextField value={email} onChange={(event)=> {
-                  setemail(event.target.value)
-                }} sx={{ color: '#FFFFFF'}} variant="standard" label="Email"/>
-                <TextField value={phone_number} onChange={(event)=> {
-                  setphone_number(event.target.value)
-                }} variant="standard" label="Numer Telefonu"/>
+                <TextField name="email" sx={{ color: '#FFFFFF'}} variant="standard" label="Email"/>
+                <TextField name="phone_number" variant="standard" label="Numer Telefonu"/>
             </div>
-                <TextField value={message} onChange={(event)=> {
-                  setmessage(event.target.value)
-                }} sx={{ color: '#FFFFFF'}} fullWidth variant="standard" multiline
+                <TextField name="message" sx={{ color: '#FFFFFF'}} fullWidth variant="standard" multiline
                 label="Wiadomość"/>
             <Button
                 type="submit"
