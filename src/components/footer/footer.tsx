@@ -17,7 +17,6 @@ export const Footer = () => {
                 <Link href={routes.home}>
                     <Image className='h-auto w-96 sm:w-52 md:w-64 mb-5' src={OfkorsLogo} alt='Ofkors Logo'/>
                 </Link>
-                <div className='text-lg font-medium mb-8 md:text-2xl'>Dane Kontaktowe</div>
                 <div className='mb-2'>
                     <Link className='transition ease-in-out hover:text-[#ff5f6d]' href="mailto:biuro@ofkoprs.pl">
                         <Email className='mr-2.5'/>biuro@ofkoprs.pl
@@ -49,7 +48,6 @@ export const Footer = () => {
                 </div>
             </div>
             <div className='mb-7 md:mb-0'>
-                <div className='text-lg font-medium mb-8 md:text-2xl'>Na skróty</div>
                 <nav className='flex flex-col'>
                     {MainMenu.map((item, index)=>{
                         return (
@@ -62,10 +60,7 @@ export const Footer = () => {
             </div>
             <div>
                 <h3 className='text-lg font-medium mb-8 md:text-2xl'>Ofkors nieruchomości sp. z o. o.</h3>
-                <p className='max-w-96 sm:max-w-60 md:max-w-96'>Nasza agencja nieruchomości to pewny sposób na znalezienie wymarzonego domu lub skuteczną sprzedaż posiadłości. 
-                    Profesjonalny zespół agentów oferuje kompleksowe wsparcie, 
-                    dbając o zadowolenie klientów od pierwszego spotkania do finalizacji transakcji. 
-                    Ułatwiamy proces nieruchomości, zapewniając profesjonalizm i skuteczność.</p>
+                <p className='max-w-96 sm:max-w-60 md:max-w-96'>Nasz agencja nieruchomości zajmuje się profesjonalną sprzedażą, zakupem oraz wynajmem nieruchomości. Działamy na terenie Warszawy i miejscowości podwarszawskich oraz mamy szerokie kontakty wśród współpracujących agencji w całej Polsce. Jesteśmy gwarancją jakości i skuteczności. Dzięki naszemu zaangażowaniu, dobrym relacjom oraz etyce pracy, większość naszych ofert pochodzi z poleceń od zadowolonych klientów.</p>
             </div>
         </footer>
     )

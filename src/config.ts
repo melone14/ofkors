@@ -1,5 +1,5 @@
 export const routes = {
-    sellWithUs: '/sprzedaj-z-nami',
+    sellWithUs: '/co-robimy',
     home: '/',
     contact: '/kontakt',
     offers: '/oferty',
@@ -9,9 +9,10 @@ export const routes = {
 }
 
 
-export const MainMenu = [ { label: 'Sprzedaj z nami', url: routes.sellWithUs },
-        { label: 'Oferty', url: routes.offers },
+export const MainMenu = [ 
         { label: 'O nas', url: routes.aboutUs },
+        { label: 'Co robimy', url: routes.sellWithUs },
+        { label: 'Oferty', url: routes.offers },
         { label: 'Blog', url: routes.blog },
         { label: 'Kontakt', url: routes.contact },
 ]

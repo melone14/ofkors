@@ -21,8 +21,8 @@ const theme = createTheme({
               },
             "&.Mui-focused": {
                 "& .MuiOutlinedInput-notchedOutline": {
-                  borderColor: "#ff5f6d",
-                  color: "#ff5f6d"
+                  borderColor: "##ffc371",
+                  color: "#ffc371"
                 },
               }
           },
@@ -36,7 +36,7 @@ const theme = createTheme({
             root: {
                 color: "#FFFFFF",
                 "&.Mui-focused": {
-                      color: "#ff5f6d"
+                      color: "#ffc371"
                 }
             },
         }
@@ -56,8 +56,8 @@ const theme = createTheme({
                   },
                 "&.Mui-focused": {
                     "& .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "#ff5f6d",
-                      color: "#ff5f6d"
+                      borderColor: "#ffc371",
+                      color: "#ffc371"
                     },
                   }
             }
@@ -170,13 +170,13 @@ export const SearchComponent = () => {
             </div>
                 <Button 
                     className="px-5 w-full md:w-auto" 
-                    style={{ backgroundColor:"#ff5f6d", height:'56px' }} 
+                    style={{ backgroundColor:"#ffc371", height:'56px' }} 
                     variant="contained"
                     onClick={()=>{
                         setshowFilters((state)=>!state)
                     }}>Filtry</Button>
                 <Link className="w-full md:w-auto" href={urlValue}>
-                    <Button className="px-5 w-full md:w-auto" style={{ backgroundColor:"#ff5f6d", height:'56px' }} variant="contained">Szukaj</Button>
+                    <Button className="px-5 w-full md:w-auto" style={{ backgroundColor:"#ffc371", height:'56px' }} variant="contained">Szukaj</Button>
                 </Link>
             </div>
             {showFilters ? 
