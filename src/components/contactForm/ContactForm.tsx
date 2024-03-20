@@ -96,13 +96,10 @@ export const ContactForm = () => {
       setIsSucces(true)
     }
   }
-
     const outerTheme = useTheme();
-
 
     return (
         <>
-
         <ThemeProvider theme={customTheme(outerTheme)}>
           {!isSucces ? <form className="w-full px-5" onSubmit={async ()=> {
             await onSubmit(
