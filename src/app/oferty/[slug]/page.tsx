@@ -4,7 +4,9 @@ import { getRealEstateDetail } from "@/clients/clients"
 import { AgentComponent } from "@/components/agent/agent";
 
 import { mortgageMarketSwapper, furnishedTypeSwapper, conditionSwapper, 
-    materialSwapper, buildingTypeSwapper } from "@/utils/realEstate";
+    materialSwapper, buildingTypeSwapper, availableNeighborhoodListSwapper,
+    communicationListSwapper, heatingTypeListSwapper, hotWaterListSwapper,
+    objectTypeSwapper, windowTypeListSwapper, spaceFloorListSwapper, kitchenEquipmentSwapper } from "@/utils/realEstate";
 
 import { PhotoComponent } from "@/components/Photos/Photos";
 import { ScrollComponent } from "@/components/scrollComponent/ScrollComponent";
@@ -14,7 +16,7 @@ import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import BathroomIcon from '@mui/icons-material/Bathroom';
 import StairsIcon from '@mui/icons-material/Stairs';
 
-const RowComponent = ({ label, data }: { label:string, data:string | number}) =>{
+const RowComponent = ({ label, data }: { label:string, data:string | number | undefined}) =>{
 
     if (!data) {
         return null
@@ -22,8 +24,8 @@ const RowComponent = ({ label, data }: { label:string, data:string | number}) =>
 
     return (
         <div className="w-full flex flex-row">
-            <div className="w-1/2">{label}:</div>
-            <div className="w-1/2" dangerouslySetInnerHTML={{ __html: data}}></div>
+            <div className="w-1/2 text-base">{label}:</div>
+            <div className="w-1/2 text-base" dangerouslySetInnerHTML={{ __html: data}}></div>
         </div>
     )
 }
@@ -99,7 +101,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                                 </div>
                                 <ScrollComponent />
                                 <h3 id="description" className="text-3xl font-bold mb-14">Opis</h3>
-                                <div className="mb-14" dangerouslySetInnerHTML={{ __html: response.description }}></div>
+                                <p className="mb-14" dangerouslySetInnerHTML={{ __html: response.description }}></p>
                                 <h3 id="information"  className="text-3xl font-bold mb-14">Szczegóły</h3>
                                 <h4 className="text-2xl font-bold mb-14">Informacje podstawowe</h4>
                                 <div className="flex flex-col w-full items-start text-xl gap-y-2.5">
@@ -108,7 +110,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                                     <RowComponent label={"Powierzchnia"} data={`${response.totalArea}m<sup>2</sup>`}/>
                                     <RowComponent label={"Liczba pokoi"} data={parseInt(response.noOfRooms)}/>
                                     <RowComponent label={"Piętro"} data={parseInt(response.floorNo)}/>
-                                    <RowComponent label={"Rodzaj nieruchomości"} data={"Rodzaj nieruchomości"}/>
+                                    <RowComponent label={"Rodzaj nieruchomości"} data={objectTypeSwapper(response.objectType)}/>
                                     <RowComponent label={"Stan nieruchomości"} data={conditionSwapper(response.condition)}/>
                                     <RowComponent label={"Umeblowanie"} data={furnishedTypeSwapper(response.furnishedType)}/>
                                 </div>
@@ -117,26 +119,64 @@ export default async function Page({ params }: { params: { slug: string } }) {
                                     <RowComponent label={"Rodzaj budynku"} data={buildingTypeSwapper(response.buildingType)}/>
                                     <RowComponent label={"Rok budowy"} data={`${parseInt(response.yearBuilt)}`}/>
                                     <RowComponent label={"Materiał"} data={materialSwapper(response.material)}/>
-                                    <RowComponent label={"Liczba pięter"} data={materialSwapper(response.material)}/>
+                                    <RowComponent label={"Liczba pięter"} data={parseInt(response.noOfFloors)}/>
                                 </div>
                                 <h4 className="text-2xl font-bold my-14">Informacje dodatkowe</h4>
-                                <div className="flex flex-col w-full items-start text-xl  gap-y-2.5">
-                                    <RowComponent label={"Ciepła woda"} data={materialSwapper(response.material)}/>
-                                    <RowComponent label={"Rodzaj ogrzewania"} data={materialSwapper(response.material)}/>
-                                    <RowComponent label={"Typ okien"} data={materialSwapper(response.material)}/>
-                                    <RowComponent label={"Podłogi w pomieszczeniach"} data={buildingTypeSwapper(response.buildingType)}/>
-                                    <RowComponent label={"Typ kuchni"} data={buildingTypeSwapper(response.buildingType)}/>
-                                    <RowComponent label={"Liczba łazienek"} data={buildingTypeSwapper(response.buildingType)}/>
-                                    <RowComponent label={"Umeblowanie"} data={buildingTypeSwapper(response.buildingType)}/>
-                                    <RowComponent label={"Adres"} data={buildingTypeSwapper(response.buildingType)}/>
-                                    <RowComponent label={"Komunikacja"} data={`${parseInt(response.yearBuilt)}`}/>
-                                    <RowComponent label={"W pobliżu"} data={materialSwapper(response.material)}/>
+                                <div className="flex flex-col w-full items-start text-xl gap-y-2.5">
+                                    <RowComponent label={"Ciepła woda"} data={`${response.hotWaterList.map(item =>{
+                                        if (hotWaterListSwapper(item) === undefined) {
+                                            return '';
+                                        }
+                                        return ' ' + hotWaterListSwapper(item)
+                                    })}`}/>
+                                    <RowComponent label={"Rodzaj ogrzewania"} data={`${response.heatingTypeList.map(item =>{
+                                        if (heatingTypeListSwapper(item) === undefined) {
+                                            return '';
+                                        }
+                                        return ' ' + heatingTypeListSwapper(item)
+                                    })}`}/>
+                                    <RowComponent label={"Typ okien"} data={`${response.windowTypeList.map(item =>{
+                                        if (windowTypeListSwapper(item) === undefined) {
+                                            return '';
+                                        }
+                                        return ' ' + windowTypeListSwapper(item)
+                                    })}`}/>
+                                    <RowComponent label={"Rodzaje podłogi"} data={`${response.spaceFloorList.map(item=>{
+                                        if (spaceFloorListSwapper(item) === undefined) {
+                                            return '';
+                                        }
+                                        return ' ' + spaceFloorListSwapper(item) 
+                                    })}`
+                                    }/>
+                                    <RowComponent label={"Wyposażenie kuchni"} data={`${response.kitchenEquipment.map(item =>{
+                                        if (kitchenEquipmentSwapper(item) === undefined) {
+                                            return '';
+                                        }
+                                        return ' ' + kitchenEquipmentSwapper(item)
+                                    })}`}/>
+                                    <RowComponent label={"Liczba łazienek"} data={parseInt(response.noOfBathrooms)}/>
+                                    <RowComponent label={"Adres"} data={`${response.location.province ? response.location.province + ', ' : ''}
+                                    ${response.location.locality ? response.location.locality + ', ' : ''}
+                                    ${response.location.quarter ? response.location.quarter + ', ' : ''}
+                                    ${response.location.fullName ? response.location.fullName : ''}`}/>
+                                    <RowComponent label={"Komunikacja"} data={`${response.communicationList.map(item =>{
+                                        if (communicationListSwapper(item) === undefined) {
+                                            return '';
+                                        }
+                                        return ' ' + communicationListSwapper(item)
+                                    })}`}/>
+                                    <RowComponent label={"W pobliżu"} data={`${response.availableNeighborhoodList.map(item=>{
+                                        if (availableNeighborhoodListSwapper(item) === undefined) {
+                                            return '';
+                                        }
+                                        return ' ' + availableNeighborhoodListSwapper(item) 
+                                    })}`}/>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-span-1 lg:col-span-4">
-                        <div className="relative lg:sticky top-8 flex flex-col items-center mb-10">
+                        <div className="relative lg:sticky top-8 flex flex-col items-center mb-10 md:mb-0">
                             {response.agent ?
                                 <AgentComponent agent={response.agent!} isOffer={true} />
                                 : null

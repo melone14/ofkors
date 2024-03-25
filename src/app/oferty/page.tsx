@@ -31,8 +31,8 @@ type Props = {
 export default async function Page(props: Props) {
     const response = await getRealEstateList(props.searchParams);
 
+   
 
-  
     return (
       <>
         <h1 className="hidden text-6xl text-medium">Nasze oferty</h1>
@@ -42,15 +42,17 @@ export default async function Page(props: Props) {
         </div>
         <div className="flex flex-row flex-wrap w-full gap-x-10 gap-y-10 px-10 justify-center my-10">
           {response.map((item, index)=>{
+            const mainImage:{
+              id: number;
+              idi:number;
+              alt:string;
+              main: boolean;
+          } = item.images.find(image => image.main === true) || item.images[0]
             const dateCreated = new Date(item.dateCreated)
             return (
                 <Link href={`${routes.offers}/${item.slug}`} key={index} className="rounded-lg transition ease-in-out hover:shadow-2xl 
                 flex flex-col shadow-xl w-[20rem] md:w-[32rem]">
-                  {item.images.map((image, index)=>{
-                    if (index ===1) return (
-                      <img className="rounded-t-lg w-full" key={index} src={`https://img.asariweb.pl/normal/${image.idi}`} alt="sdfgh" />
-                      )
-                    })}
+                    <img className="rounded-t-lg w-full"  src={`https://img.asariweb.pl/normal/${mainImage.idi}`} alt={item.headerAdvertisement} />
                     <div className="p-5 w-full">
                       <div className="flex flex-row items-center gap-x-2.5 mx-auto mb-4">
                         <PlaceIcon/>

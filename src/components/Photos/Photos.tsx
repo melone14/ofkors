@@ -8,13 +8,14 @@ type Props = {
         id: number;
         idi:number;
         alt:string;
+        main: boolean;
     }[],
     title: string;
 }
 
 export const PhotoComponent: FC<Props> = ({ images, title }) => {
-
-    const [currentPhoto, setCurrentPhoto] = useState(0)
+    
+    const [currentPhoto, setCurrentPhoto] = useState(images.findIndex(image => image.main === true) !== -1 ? images.findIndex(image => image.main === true) : 0)
 
     const changePhoto = (direction: 'next' | 'prev') => {
         if (direction === 'prev') {

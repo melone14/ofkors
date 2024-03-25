@@ -98,18 +98,20 @@ export interface AgenDetail {
 
 }
 
-export type availableNeighborhoodList = "Fitness" |  "Bank" | "Pool" | "TennisCourt" | "Restaurant" | "ShoppingCenter" | "School" | "Kindergarten" |
+export type availableNeighborhoodList = {name: "Fitness" |  "Bank" | "Pool" | "TennisCourt" | "Restaurant" | "ShoppingCenter" | "School" | "Kindergarten" |
 "Hospital" | "Forest" | "Park" |"River" | "Lake"  | "Sea" | "Mountains" | "Playground" | "SportsHall" | "Church" | "Bar" | "Harbor" | "BodyShop" | "RailwaySiding" |"Paint" |"LowBuilding" |"PoliceStation" |"Pharmacy" | "Bazaar" |"Nursery" | "JuniorHighSchool" |"Shop" |"HighSchool" |"MedicalClinic"
+id: number}
 
-export type communicationList ="Bus" |"Tram"|"Metro"|"SuburbanTrain"|"Train"|"Trolley"|"Airport"|"Highway"|"Pks"|"None"|"Minibus"
+export type communicationList ={ name:"Bus" |"Tram"|"Metro"|"SuburbanTrain"|"Train"|"Trolley"|"Airport"|"Highway"|"Pks"|"None"|"Minibus"
+id:number}
 
 export type buildingType = "ApartmentOfficeBuilding" |"OfficeBuilding" |"House" |"TenementHouse" |"ApartmentRetailBuilding" |"OfficeRetailBuilding" |"ApartmentBuilding" |"StorageAndOfficeCenter" |"Seal" |"LowBlock" |"HighBlock" |"Villa" |"Loft" |"HouseMultiPlaces" |"ApartmentBlock" |"SectionHouse" |"ShoppingCenter" |"Garage" |"Pavilion" |"Hotel" |"Court" |"Palace" |"Pension" |"Historical" |"Other" |"Restaurant" |"Cottage" |"PartOfHouse" |"WavyBlock" |"Outbuilding" |"RepairShop" |"Hall" |"SkyScraper" |"Motel" |"Warehouse" |"Mill" |"Shop" |"PetrolStation" |"Granary" |"Pub" |"Newsstand" |"Saloon" |"Inn" |"Cafe" |"Cabinet" |"DistributionCentre" |"Grange" |"Agriturismo" |"Farm" |"ProductionHall" |"OfficeSpace"
 
 export type condition ="Perfect" |"VeryGood" |"Good" |"NeedsSmallRenovation" |"NeedsTotalRenovation" |"NeedsConversion" |"NeedsFinishing" |"DevelopmentState" |"CloseRawState" |"ForDemolition" |"Abandoned" |"ToRenovate" |"ToRefresh" |"AfterRenovation" |"Renovated" |"HighStandard" |"WithoutWhiteMontage" |"ToLive" |"AboveConstruction" |"WithTenants" |"Negotiated" |"ToRenew"
 
-export type kitchenEquipment = "Furniture" |"KitchenFurniture" |"Refrigerator" |"WashingMachine" |"Dishwasher" |"Hood" |"Oven" |"Microwave" |"ElectricOven" |"GasHob" |"Pantry" |"Sink" |"GasOven" |"ElectricStove" |"Freezer"
+export type kitchenEquipment = {name: "Furniture" |"KitchenFurniture" |"Refrigerator" |"WashingMachine" |"Dishwasher" |"Hood" |"Oven" |"Microwave" |"ElectricOven" |"GasHob" |"Pantry" |"Sink" |"GasOven" |"ElectricStove" |"Freezer"}
 
-export type material = "PrecastConcreteSlabs" |"Brick" |"Ytong" |"HFrame" |"Concrete" |"Wood" |"AirBrick" |"Other" |"Monolith" |"Mixed" |"Blocks" |"Steel" |"Glass" |"Aerated" |"SandLimeBrick"
+export type material = "PrecastConcreteSlabs" |"Brick" |"Ytong" |"HFrame" |"Concrete" |"Wood" |"AirBrick" |"Other" |"Monolith" |"Mixed" |"Blocks" |"Steel" |"Glass" |"Aerated" |"SandLimeBrick" | 'Ceramics'
 
 export type apartmentTypeList = "Apartment" |"Loft" |"Enfilade" |"GoodToSet" |"Attic" |"FloorHouse" |"Penthouse" |"Multilevel" |"Mezzanine" |"TransitiveRoom" |"TransitiveRooms" |"OneLevel" |"TwoLevel"
 
@@ -117,18 +119,29 @@ export type furnishedType = "Yes" |"No" |"Possible" |"Partially"
 
 export type ownershipType ="Mortgage" |"HousingCooperative" |"Shared" |"Other" |"HousingCooperativeKW" |"TenantCooperative" |"Legal" |"Physical" |"RealEstate" |"RightOfSuperficies" |"LeaseContract" |"Coestate"
 
-export type heatingTypeList = "City" |"Own" |"Gas" |"Electric" |"Oil" |"Coal" |"Environmental" |"Other" |"Fireplace" |"Stove" |"HeatPump" |"SolidFuel" |"HotAirBlowerUsingGas" |"HotAirBlowerUsingWater" |"InfraredHeater" |"Floor" |"Biomass"
+export type heatingTypeList = { name:"City" |"Own" |"Gas" |"Electric" |"Oil" |"Coal" |"Environmental" |"Other" |"Fireplace" |"Stove" |"HeatPump" |"SolidFuel" |"HotAirBlowerUsingGas" |"HotAirBlowerUsingWater" |"InfraredHeater" |"Floor" |"Biomass"
+id:number }
 
 export type garageList = "Garage" |"RentAbility" |"Guarded" |"None" |"ParkingSpace" |"Underground" |"ExtraCharge" |"Single" |"Double" |"NotGuarded" |"Shed" |"Detached" |"OnStreet" |"InBuilding" |"Obligatory"
 
+export type hotWaterList = {name: "CityWater" | "GasStove" | "ElectricOven" | "Boiler" | "Solar" | "Other" | "SolidFuel" | "Geothermal" | "CoalStove" | "HeatPump"}
 
+export type objectType = 'apartment' | 'house' | 'lot' | "office" | 'object'
 
+export type windowTypeList = {name: "Aluminium" | "PCV" | "WoodenOldType" | "WoodenNewType" | "Steel" |  "Roof" | "Burglar" | "Portcullis" | "Shades" | "Old"}
 
+export type spaceFloorList = {
+    name: "Parquet" |    "Panels" |    "BoardFloor" |    "TerraCotta" |    "Other" |    "Mixed" |    "ConcreteFloor" |    "FittedCarpet" |    "Laminate" |    "Tiles" |    "Linoleum" |    "Gres" |    "PCV" |    "Mozaic"
+}
 
 export interface RealEstateObject {
     id: number;
     slug: string;
     ido: number;
+    objectType: objectType;
+    hotWaterList: hotWaterList[]; //to do
+    spaceFloorList: spaceFloorList[]; //to fdo
+    windowTypeList: windowTypeList[] //to do
     dateCreated: string;
     agent: Agent | null;
     availableNeighborhoodList: availableNeighborhoodList[];
@@ -145,6 +158,7 @@ export interface RealEstateObject {
         id: number;
         idi:number;
         alt:string;
+        main: boolean;
     }[]
     apartmentTypeList: apartmentTypeList[];
     floorNo: string;
