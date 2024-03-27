@@ -11,7 +11,7 @@ export const routes = {
 
 export const MainMenu = [ 
         { label: 'O nas', url: routes.aboutUs },
-        { label: 'Co robimy', url: routes.sellWithUs },
+        { label: 'Ofkors', url: routes.sellWithUs },
         { label: 'Oferty', url: routes.offers },
         { label: 'Blog', url: routes.blog },
         { label: 'Kontakt', url: routes.contact },

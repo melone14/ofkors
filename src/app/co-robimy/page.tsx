@@ -13,6 +13,9 @@ import { GoShieldCheck } from "react-icons/go";
 import { PiHandshake } from "react-icons/pi";
 import { PiStudent } from "react-icons/pi";
 import { BiTransfer } from "react-icons/bi";
+import { MdOutlineHandshake } from "react-icons/md";
+import { MdOutlineShield } from "react-icons/md";
+import { CiTrophy } from "react-icons/ci";
 
 import { ContactSection } from "@/components/contactSecion/ContactSection";
 
@@ -36,7 +39,6 @@ export default function Page() {
     <>
       <h1 className="my-20 mb-5 text-6xl text-medium text-center hidden">Sprzedaj z Nami</h1>
       <div className="w-full flex flex-col items-center">
-        <div className="mb-20 text-center w-full text-3xl md:text-4xl">Dlaczego Ofkors?</div>
         <div className="flex flex-col lg:flex-row items-center justify-center w-full flex-wrap px-5 gap-10 max-w-[85rem] mb-20">
           {wartosci.map((item, index)=>{
             return (
@@ -53,7 +55,7 @@ export default function Page() {
       <h2 className="text-3xl md:text-4xl mb-20 text-center">Oczywiste są dla nas</h2>
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 mb-20 md:mb-10 md:px-5">
         <div className="flex flex-col items-center justify-center gap-5 text-white w-60 h-60 rounded-full bg-[#47141e] shadow-2xl">
-          <div><HandshakeIcon sx={{ fontSize: "2.5rem"}}/></div>
+          <div><MdOutlineHandshake style={{ fontSize: "2.5rem"}}/></div>
           <div className="text-2xl">Relacja</div>
         </div>
         <div className=" md:w-1/2 max-w-[30rem] text-2xl text-center px-5 md:px-0">To fundament  naszego działania, zarówno w życiu codziennym, jak i w biznesie. Wiemy, że tylko dzięki odpowiedniej interakcji, zaufaniu i komunikacji z klientami jesteśmy w stanie wypracować wspólny sukces.</div>
@@ -62,14 +64,14 @@ export default function Page() {
       <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-10 mb-20 md:mb-10 md:px-5">
         <div className=" md:w-1/2 max-w-[30rem] text-2xl text-center px-5 md:px-0">To dla nas priorytet na każdym etapie transakcji. W komunikacji z klientem, tworzeniu oferty nieruchomości, finalizacji transakcji. To gwarancja</div>
         <div className="flex flex-col items-center justify-center gap-5 text-white w-60 h-60 rounded-full bg-[#47141e] shadow-2xl">
-          <div><LocalPoliceIcon sx={{ fontSize: "2.5rem"}}/></div>
+          <div><MdOutlineShield style={{ fontSize: "2.5rem"}}/></div>
           <div className="text-2xl">Jakość</div>
         </div>
       </div>
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 mb-20 md:mb-10 md:px-5">
         <div className="flex flex-col items-center justify-center gap-5 text-white w-60 h-60 rounded-full bg-[#47141e] shadow-2xl">
-          <div><LeaderboardIcon sx={{ fontSize: "2.5rem"}}/></div>
+          <div><CiTrophy style={{ fontSize: "2.5rem"}}/></div>
           <div className="text-2xl">Skuteczność</div>
         </div>
         <div className=" md:w-1/2 max-w-[30rem] text-2xl text-center px-5 md:px-0">To sens naszego działania. Na końcu transakcji liczy się efekt. Dzięki temu od wielu lat pracujemy na poleceniach.</div>

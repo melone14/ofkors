@@ -26,7 +26,7 @@ export default function Home() {
           <SearchComponent />
         </div>
       </div>
-      <div style={{ backgroundColor: 'rgba(71, 20, 30, 0.7)' }} className='mx-2 md:px-5 lg:mx-auto px-5 md:px-20 py-10 rounded-2xl text-white block md:hidden'>
+      <div style={{ backgroundColor: 'rgba(71, 20, 30)' }} className='mx-2 md:px-5 lg:mx-auto px-5 md:px-20 py-10 rounded-2xl text-white block md:hidden'>
           <div className='text-3xl text-white font-bold mb-10 text-center'>Sprawdź nasze aktualne oferty</div>
           <SearchComponent />
         </div>
@@ -39,19 +39,7 @@ export default function Home() {
           <p className='lg:max-w-96 text-xl mb-5 text-center'>Jesteśmy ciekawi, jaką historię Ty nam opowiesz.</p>
           <div className='lg:max-w-96 flex flex-col items-center'>
             <div className='lg:max-w-96 text-xl text-center'>Joanna Stojanowska</div>
-            <div className='lg:max-w-96 text-xl text-center'>Dariusz Czajka</div>
-          </div>
-        </div>
-      </div>
-      <div className='flex flex-col lg:flex-row-reverse gap-x-10 items-center my-20'>
-        <div className='w-full lg:w-[35rem] px-5 lg:px-0 flex flex-col items-center'>
-          <Image className='w-full rounded-xl mx-5 lg:mx-0 mb-5 lg:mb-0' src={BothAgents} alt="Two Agents" />
-        </div>
-        <div className='p-5 lg:p-0 h-full'>
-          <div className='w-full h-full flex flex-col items-center justify-center gap-5'>
-            <div className='text-2xl'>
-              Chcesz wiedzieć więcej?
-            </div>
+            <div className='lg:max-w-96 text-xl text-center mb-5'>Dariusz Czajka</div>
             <Link className='text-center text-white px-5 py-2.5 bg-[#47141e] text-2xl rounded-xl' href={routes.aboutUs}>
               O nas
             </Link>

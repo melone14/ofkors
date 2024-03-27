@@ -22,7 +22,7 @@ export const HeaderMenu = () => {
 
     return (
         <>
-        <div className='w-full h-16 text-black flex flex-row justify-center items-center lg:hidden z-10'>
+        <div className='w-full h-16 text-black flex flex-row justify-end items-center lg:hidden z-10 px-5'>
             <IconButton onClick={()=>{
                 setMenuOpen((state)=>!state)
             }}>

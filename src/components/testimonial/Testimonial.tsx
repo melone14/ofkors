@@ -11,11 +11,10 @@ import Agents from "@/images/joannaDarek/ofkors agents.jpg"
 
 
 const Opinions = [
-    {id: 0, name: "Patryk Wojciechowski", rating: 5, descrition: 'Muszę przyznać, że byłem początkowo sceptyczny co do zakupów przez internet, ale ta firma całkowicie zmieniła moje podejście. Ich obsługa klienta jest niesamowita. Zadzwoniłem z kilkoma pytaniami dotyczącymi produktu i zostałem obsłużony przez bardzo pomocnego i kompetentnego pracownika.', jobRole: 'CEO, Spexo'},
-    {id: 1, name: "Patryk Wojciechowski", rating: 5, descrition: 'To był mój pierwszy zakup w tym sklepie internetowym i jestem pod wrażeniem. Strona internetowa była łatwa w nawigacji, a proces zamawiania był prosty i intuicyjny. Gdy pojawił się problem z dostawą (zgubił się paczkowicz), obsługa klienta natychmiast podjęła działania w moim imieniu i zagwarantowała, że paczka dotrze na czas. ', jobRole: 'CEO, Spexo'},
-    {id: 2, name: "Patryk Wojciechowski", rating: 5, descrition: 'Mam bardzo pozytywne doświadczenia z tą firmą. Ich asortyment jest szeroki, a ceny są konkurencyjne. Poza tym, obsługa klienta jest bez zarzutu. Ostatnio miałem problem z jednym z produktów, który otrzymałem, ale firma szybko zareagowała i zaoferowała mi rozwiązanie problemu. ', jobRole: 'CEO, Spexo'},
-    {id: 4, name: "Patryk Wojciechowski", rating: 5, descrition: 'Byłem zaskoczony, jak szybko moje zamówienie zostało zrealizowane. Produkt, który kupiłem, był bardzo dobrze zapakowany i dotarł do mnie w idealnym stanie. Poza tym, komunikacja z firmą była sprawna i uprzejma.', jobRole: 'CEO'},
-    {id: 5, name: "Patryk Wojciechowski", rating: 5, descrition: 'Nigdy nie pisałem opinii o sklepach internetowych, ale ta firma zasługuje na uznanie. Ich produkty są wysokiej jakości, a obsługa klienta jest niesamowita. Ostatnio miałem problem z dostawą, ale firma szybko zareagowała i zorganizowała ponowną wysyłkę paczki. ', jobRole: 'CEO, Spexo'},
+    {id: 0, name: "p. Kamil", rating: 5, descrition: 'Współpraca z biurem "Ofkors" była dla mnie niesamowicie pozytywnym doświadczeniem. Ich profesjonalizm i zaangażowanie sprawiły, że sprzedaż mojego mieszkania przebiegła sprawnie i bezproblemowo. Polecam z całego serca!', jobRole: 'CEO, Spexo'},
+    {id: 1, name: "Robert K", rating: 5, descrition: 'Biuro "Ofkors" to zespół ludzi, którzy naprawdę wiedzą, co robią. Ich strategia sprzedażowa była trafna, a obsługa klienta na najwyższym poziomie. Bardzo doceniam ich pomoc i gorąco polecam każdemu, kto szuka skutecznego partnera w sprzedaży nieruchomości.', jobRole: 'CEO, Spexo'},
+    {id: 2, name: "Marta P", rating: 5, descrition: 'Biuro "Ofkors" okazało się niezawodnym partnerem w procesie sprzedaży mojego mieszkania. Ich troskliwe podejście do moich potrzeb oraz skuteczne działania przyniosły oczekiwane rezultaty. Dzięki nim mogłam bez obaw oddać się całemu procesowi. Szczerze polecam!', jobRole: 'CEO, Spexo'},
+    {id: 4, name: "Ania K", rating: 5, descrition: 'Współpraca na 5 gwiazdek. Pełny profesjonalizm w każdym calu. Od pierwszego spotkania po przekazanie kluczy czyłam wspracie. Polecam z czystym sumieniem.', jobRole: 'CEO'},
 ]
 
 
@@ -31,7 +30,6 @@ export const Testimonial = ({currentOpinion} : {currentOpinion: any}) => {
                     <div className="max-w-[20rem] md:max-w-[30rem] text-xl text-center min-h-40">&apos;{currentOpinion.descrition}&apos;</div>
                     <div className="flex flex-col gap-y-5 items-center">
                             <div>{currentOpinion.name}</div>
-                            <div>{currentOpinion.jobRole}</div>
                     </div>
                 </div>
             </div>

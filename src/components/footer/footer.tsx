@@ -60,7 +60,7 @@ export const Footer = () => {
             </div>
             <div>
                 <h3 className='text-lg font-medium mb-8 md:text-2xl'>Ofkors Nieruchomości sp. z o. o.</h3>
-                <p className='max-w-96 sm:max-w-60 md:max-w-96 text-justify'>Nasz agencja nieruchomości zajmuje się profesjonalną sprzedażą, zakupem oraz wynajmem nieruchomości. Działamy na terenie Warszawy i miejscowości podwarszawskich oraz mamy szerokie kontakty wśród współpracujących agencji w całej Polsce. Jesteśmy gwarancją jakości i skuteczności. Dzięki naszemu zaangażowaniu, dobrym relacjom oraz etyce pracy, większość naszych ofert pochodzi z poleceń od zadowolonych klientów.</p>
+                <p className='max-w-96 sm:max-w-60 md:max-w-96 text-justify'>Nasza agencja nieruchomości zajmuje się profesjonalną sprzedażą, zakupem oraz wynajmem nieruchomości. Działamy na terenie Warszawy i miejscowości podwarszawskich oraz mamy szerokie kontakty wśród współpracujących agencji w całej Polsce. Jesteśmy gwarancją jakości i skuteczności. Dzięki naszemu zaangażowaniu, dobrym relacjom oraz etyce pracy, większość naszych ofert pochodzi z poleceń od zadowolonych klientów.</p>
             </div>
         </footer>
     )
