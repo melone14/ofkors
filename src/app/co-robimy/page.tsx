@@ -55,7 +55,7 @@ export default function Page() {
       <h2 className="text-3xl md:text-4xl mb-20 text-center">Oczywiste są dla nas</h2>
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 mb-20 md:mb-10 md:px-5">
         <div className="flex flex-col items-center justify-center gap-5 text-white w-60 h-60 rounded-full bg-[#47141e] shadow-2xl">
-          <div><MdOutlineHandshake style={{ fontSize: "2.5rem"}}/></div>
+          <div><PiHandshake style={{ fontSize: "2.5rem"}}/></div>
           <div className="text-2xl">Relacja</div>
         </div>
         <div className=" md:w-1/2 max-w-[30rem] text-xl text-center px-5 md:px-0">To fundament  naszego działania, zarówno w życiu codziennym, jak i w biznesie. Wiemy, że tylko dzięki odpowiedniej interakcji, zaufaniu i komunikacji z klientami jesteśmy w stanie wypracować wspólny sukces.</div>
