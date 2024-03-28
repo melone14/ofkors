@@ -23,10 +23,8 @@ export const AgentTestimonial = ({currentOpinion} : {currentOpinion: Opinion}) =
                     },}} readOnly value={parseFloat(currentOpinion.value)} /></div>
                     <div className="max-w-[30rem] text-md text-center min-h-40 h-" dangerouslySetInnerHTML={{__html: currentOpinion.content}}/>
                     <div className="flex flex-row gap-x-4 items-center">
-                        <Image className="w-16 h-16 rounded-full" src={Agents} alt={currentOpinion.name} />
                         <div className="h-16 flex flex-col items-start gap-y-2 justify-center">
                             <div>{currentOpinion.name}</div>
-                            <div>{currentOpinion.bio}</div>
                         </div>
                     </div>
                 </div>
