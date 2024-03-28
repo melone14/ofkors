@@ -25,8 +25,8 @@ export default async function Page() {
         <div className="flex w-full px-10 flex-col lg:flex-row items-center p-5 lg:px-10 justify-center gap-10 mb-10">
             <Image className="w-full lg:w-1/3 rounded-xl shadow-xl" src={Agents} alt="Agenci Nieruchomości" />
             <div  className="w-full lg:w-1/3  text-justify">
-              <div className="text-justify mb-5">Ofkors Nieruchomości to pasjonaci, którzy połączyli swoje  wieloletnie doświadczenie, wiedzę i energię, aby stworzyć wyjątkowe miejsce na rynku nieruchomości. Nasza otwartość, zaangażowanie i łatwość nawiązywania relacji sprawiają, że budujemy trwałe więzi zarówno z klientami, jak i partnerami biznesowymi. W Ofkors wierzymy, że sukces opiera się nie tylko na umiejętnościach zawodowych, ale także na etyce pracy i indywidualnemu podejściu do każdego klienta. </div>
-              <div className="mx-auto">
+              <div className="text-justify mb-5 text-xl">Ofkors Nieruchomości to pasjonaci, którzy połączyli swoje  wieloletnie doświadczenie, wiedzę i energię, aby stworzyć wyjątkowe miejsce na rynku nieruchomości. Nasza otwartość, zaangażowanie i łatwość nawiązywania relacji sprawiają, że budujemy trwałe więzi zarówno z klientami, jak i partnerami biznesowymi. W Ofkors wierzymy, że sukces opiera się nie tylko na umiejętnościach zawodowych, ale także na etyce pracy i indywidualnemu podejściu do każdego klienta. </div>
+              <div className="mx-auto text-xl">
                 Przekonaj się, co możemy zrobić dla Ciebie.
               </div>
             </div>

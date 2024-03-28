@@ -54,7 +54,7 @@ export default async function Page(props: Props) {
                 flex flex-col shadow-xl w-[20rem] md:w-[32rem]">
                     <img className="rounded-t-lg w-full"  src={`https://img.asariweb.pl/normal/${mainImage.idi}`} alt={item.headerAdvertisement} />
                     <div className="p-5 w-full">
-                      <div className="flex flex-row items-center gap-x-2.5 mx-auto mb-4">
+                      <div className="flex flex-row items-center gap-x-2.5 mx-auto mb-8">
                         <PlaceIcon/>
                         <div className="flex flex-row items-center flex-wrap gap-x-2.5">
                           <div>
@@ -71,15 +71,9 @@ export default async function Page(props: Props) {
                           </div>
                         </div>
                       </div>
-                      <div className="mb-4">
-                        Dodano {dateCreated.getDate()}.{dateCreated.getMonth()+1}.{dateCreated.getFullYear()}
-                      </div>
-                      <div className="mb-4">
+                      <div className="mb-8">
                         <div className="text-2xl font-bold">{parseInt(item.price.amount)} {item.price.currency}</div>
                         {/* <div>{pricePerm2.toPrecision(2)}</div> */}
-                      </div>
-                      <div className="mb-4">
-                      {mortgageMarketSwapper(item.mortgageMarket)} / {mortgageMarketSwapper(item.mortgageMarket)}
                       </div>
                       <div className="mb-4">
                         {item.totalArea}m<sup>2</sup> / {parseInt(item.noOfRooms)} {(parseInt(item.noOfRooms)===1) ? 'Pokój' :
