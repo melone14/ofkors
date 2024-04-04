@@ -47,15 +47,19 @@ export default async function Page ({ params }: { params: { slug: string } }) {
             <h2 className="text-3xl font-bold my-10">Moje oferty</h2>
             <div className="flex flex-col md:flex-row flex-wrap w-full gap-x-10 gap-y-10 px-10 justify-center mb-10">
             {response.offers.map((item, index)=>{
-            const dateCreated = new Date(item.dateCreated)
+            const mainImage:{
+              id: number;
+              idi:number;
+              alt:string;
+              main: boolean;
+          } = item.images.find(image => image.main === true) || item.images[0]
             return (
                 <Link href={`${routes.offers}/${item.slug}`} key={index} className="rounded-lg flex flex-col shadow-xl">
-                  {item.images.map((image, index)=>{
-                    if (index ===1) return (
-                      <img className="rounded-t-lg w-[32rem]" key={index} src={`https://img.asariweb.pl/normal/${image.idi}`} alt={item.headerAdvertisement} />
-                      )
-                    })}
+                  <img className="rounded-t-lg w-[32rem]" key={index} src={`https://img.asariweb.pl/normal/${mainImage.idi}`} alt={item.headerAdvertisement} />
                     <div className="p-5 w-[20rem] md:w-[32rem]">
+                      <div className="text-2xl flex flex-row flex-wrap font-bold mb-4">
+                        {item.headerAdvertisement}
+                      </div>
                       <div className="flex flex-row items-center gap-x-2.5 mx-auto mb-4">
                         <Place/>
                         <div className="flex flex-row items-center flex-wrap gap-x-2.5">
@@ -74,21 +78,15 @@ export default async function Page ({ params }: { params: { slug: string } }) {
                         </div>
                       </div>
                       <div className="mb-4">
-                        Dodano {dateCreated.getDate()}.{dateCreated.getMonth()+1}.{dateCreated.getFullYear()}
-                      </div>
-                      <div className="mb-4">
                         <div className="text-2xl font-bold">{parseInt(item.price.amount)} {item.price.currency}</div>
                         {/* <div>{pricePerm2.toPrecision(2)}</div> */}
                       </div>
                       <div className="mb-4">
                       {mortgageMarketSwapper(item.mortgageMarket)} / {mortgageMarketSwapper(item.mortgageMarket)}
                       </div>
-                      <div className="mb-4">
+                      <div>
                         {item.totalArea}m<sup>2</sup> / {parseInt(item.noOfRooms)} {(parseInt(item.noOfRooms)===1) ? 'Pokój' :
                         ((parseInt(item.noOfRooms)<=4) ? 'Pokoje' : "Pokoi")} / {parseInt(item.floorNo)} Piętro
-                      </div>
-                      <div className="text-2xl flex flex-row flex-wrap font-bold">
-                        {item.headerAdvertisement}
                       </div>
                     </div>
                   </Link>
@@ -100,15 +98,21 @@ export default async function Page ({ params }: { params: { slug: string } }) {
             <h2 className="text-3xl font-bold my-10">Zrealizowane oferty</h2>
             <div className="flex flex-col md:flex-row flex-wrap w-full gap-x-10 gap-y-10 px-10 justify-center mb-10">
             {response.sold_offers.map((item, index)=>{
-            const dateCreated = new Date(item.dateCreated)
+              const dateCreated = new Date(item.dateCreated)
+              const mainImage:{
+                id: number;
+                idi:number;
+                alt:string;
+                main: boolean;
+            } = item.images.find(image => image.main === true) || item.images[0]
+            
             return (
                 <Link href={`${routes.offers}/${item.slug}`} key={index} className="rounded-lg flex flex-col shadow-xl">
-                  {item.images.map((image, index)=>{
-                    if (index ===1) return (
-                      <img className="rounded-t-lg w-[32rem]" key={index} src={`https://img.asariweb.pl/normal/${image.idi}`} alt={item.headerAdvertisement} />
-                      )
-                    })}
+                  <img className="rounded-t-lg w-[32rem]" key={index} src={`https://img.asariweb.pl/normal/${mainImage.idi}`} alt={item.headerAdvertisement} />
                     <div className="p-5 w-[20rem] md:w-[32rem]">
+                      <div className="text-2xl flex flex-row flex-wrap font-bold mb-4">
+                        {item.headerAdvertisement}
+                      </div>
                       <div className="flex flex-row items-center gap-x-2.5 mx-auto mb-4">
                         <Place/>
                         <div className="flex flex-row items-center flex-wrap gap-x-2.5">
@@ -127,21 +131,15 @@ export default async function Page ({ params }: { params: { slug: string } }) {
                         </div>
                       </div>
                       <div className="mb-4">
-                        Dodano {dateCreated.getDate()}.{dateCreated.getMonth()+1}.{dateCreated.getFullYear()}
-                      </div>
-                      <div className="mb-4">
                         <div className="text-2xl font-bold">{parseInt(item.price.amount)} {item.price.currency}</div>
                         {/* <div>{pricePerm2.toPrecision(2)}</div> */}
                       </div>
                       <div className="mb-4">
                       {mortgageMarketSwapper(item.mortgageMarket)} / {mortgageMarketSwapper(item.mortgageMarket)}
                       </div>
-                      <div className="mb-4">
+                      <div>
                         {item.totalArea}m<sup>2</sup> / {parseInt(item.noOfRooms)} {(parseInt(item.noOfRooms)===1) ? 'Pokój' :
                         ((parseInt(item.noOfRooms)<=4) ? 'Pokoje' : "Pokoi")} / {parseInt(item.floorNo)} Piętro
-                      </div>
-                      <div className="text-2xl flex flex-row flex-wrap font-bold">
-                        {item.headerAdvertisement}
                       </div>
                     </div>
                   </Link>
