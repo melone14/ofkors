@@ -151,6 +151,7 @@ export interface RealEstateObject {
     description: string;
     elevator: boolean | null;
     headerAdvertisement: string;
+    lotArea: number | null;
     kitchenEquipment: kitchenEquipment[];
     material: material
     yearBuilt: string;

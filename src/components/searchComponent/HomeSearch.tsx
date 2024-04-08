@@ -62,6 +62,34 @@ const theme = createTheme({
                   }
             }
         }
+      },
+      MuiMenuItem: {
+        styleOverrides: {
+            root: {
+                backgroundColor: "#ffc371",
+                color: '#FFFFFF',
+                "&:focus": {
+                    backgroundColor: "#f7d4a3",
+                  },
+                  "&:hover": {
+                    backgroundColor: "#f7d4a3",
+                  },
+                  "&.Mui-selected":{
+                    backgroundColor: "#f7d4a3",
+                    "&:hover": {
+                        backgroundColor: "#f7d4a3",
+                    }
+                  }
+            }
+        }
+      },
+      MuiList: {
+        styleOverrides: {
+            root: {
+                paddingTop: '0px',
+                paddingBottom: '0px',
+            }
+        }
       }
     },
   });
@@ -116,7 +144,7 @@ export const SearchComponent = () => {
 
     return (
         <ThemeProvider theme={theme}>
-    <div className="mx-auto md:mx-3 max-w-7xl rounded-lg lg:mx-auto z-10">
+        <div className="mx-auto md:mx-3 max-w-7xl rounded-lg lg:mx-auto z-10">
         <div className="w-full flex flex-col gap-y-5">
             <div className="flex flex-col md:flex-row w-full justify-between items-center gap-x-5 gap-y-5">
             <div className="flex flex-col md:flex-row w-full justify-between items-center gap-x-5 max-w-4xl gap-y-5">

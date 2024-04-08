@@ -9,6 +9,7 @@ import Link from "next/link";
 import { SocialIconComponent } from "@/components/socialIcon/SocialIcon";
 import { AgentTestimonialComponent } from "@/components/testimonial/AgentTestimonial";
 
+import { RealEstateCard } from "@/components/real_estate_card/EstateCard";
 
 export const revalidate = 3600
 
@@ -40,56 +41,15 @@ export default async function Page ({ params }: { params: { slug: string } }) {
             </div>
             <div>
                 <h3 className="text-3xl lg:text-4xl mb-10">O mnie</h3>
-                <div className="w-full lg:w-[50rem] text-xl lg:text-2xl" dangerouslySetInnerHTML={{__html: agent.content}}></div>
+                <div className="w-full lg:w-[40rem] text-xl" dangerouslySetInnerHTML={{__html: agent.content}}></div>
             </div>
         </div>
         {response.offers.length !== 0 ? <div className="w-full flex flex-col items-center">
             <h2 className="text-3xl font-bold my-10">Moje oferty</h2>
             <div className="flex flex-col md:flex-row flex-wrap w-full gap-x-10 gap-y-10 px-10 justify-center mb-10">
             {response.offers.map((item, index)=>{
-            const mainImage:{
-              id: number;
-              idi:number;
-              alt:string;
-              main: boolean;
-          } = item.images.find(image => image.main === true) || item.images[0]
             return (
-                <Link href={`${routes.offers}/${item.slug}`} key={index} className="rounded-lg flex flex-col shadow-xl">
-                  <img className="rounded-t-lg w-[32rem]" key={index} src={`https://img.asariweb.pl/normal/${mainImage.idi}`} alt={item.headerAdvertisement} />
-                    <div className="p-5 w-[20rem] md:w-[32rem]">
-                      <div className="text-2xl flex flex-row flex-wrap font-bold mb-4">
-                        {item.headerAdvertisement}
-                      </div>
-                      <div className="flex flex-row items-center gap-x-2.5 mx-auto mb-4">
-                        <Place/>
-                        <div className="flex flex-row items-center flex-wrap gap-x-2.5">
-                          <div>
-                            {item.location.province},
-                          </div>
-                          {item.location.quarter ? <div>
-                            {item.location.quarter},
-                          </div> : null}
-                          {item.location.locality ? <div>
-                            {item.location.locality},
-                          </div> : null}
-                          <div>
-                            {item.location.fullName}
-                          </div>
-                        </div>
-                      </div>
-                      <div className="mb-4">
-                        <div className="text-2xl font-bold">{parseInt(item.price.amount)} {item.price.currency}</div>
-                        {/* <div>{pricePerm2.toPrecision(2)}</div> */}
-                      </div>
-                      <div className="mb-4">
-                      {mortgageMarketSwapper(item.mortgageMarket)} / {mortgageMarketSwapper(item.mortgageMarket)}
-                      </div>
-                      <div>
-                        {item.totalArea}m<sup>2</sup> / {parseInt(item.noOfRooms)} {(parseInt(item.noOfRooms)===1) ? 'Pokój' :
-                        ((parseInt(item.noOfRooms)<=4) ? 'Pokoje' : "Pokoi")} / {parseInt(item.floorNo)} Piętro
-                      </div>
-                    </div>
-                  </Link>
+                <RealEstateCard sold={false} index={index} key={index} item={item} />
             )
           })}
         </div>
@@ -98,51 +58,8 @@ export default async function Page ({ params }: { params: { slug: string } }) {
             <h2 className="text-3xl font-bold my-10">Zrealizowane oferty</h2>
             <div className="flex flex-col md:flex-row flex-wrap w-full gap-x-10 gap-y-10 px-10 justify-center mb-10">
             {response.sold_offers.map((item, index)=>{
-              const dateCreated = new Date(item.dateCreated)
-              const mainImage:{
-                id: number;
-                idi:number;
-                alt:string;
-                main: boolean;
-            } = item.images.find(image => image.main === true) || item.images[0]
-            
             return (
-                <Link href={`${routes.offers}/${item.slug}`} key={index} className="rounded-lg flex flex-col shadow-xl">
-                  <img className="rounded-t-lg w-[32rem]" key={index} src={`https://img.asariweb.pl/normal/${mainImage.idi}`} alt={item.headerAdvertisement} />
-                    <div className="p-5 w-[20rem] md:w-[32rem]">
-                      <div className="text-2xl flex flex-row flex-wrap font-bold mb-4">
-                        {item.headerAdvertisement}
-                      </div>
-                      <div className="flex flex-row items-center gap-x-2.5 mx-auto mb-4">
-                        <Place/>
-                        <div className="flex flex-row items-center flex-wrap gap-x-2.5">
-                          <div>
-                            {item.location.province},
-                          </div>
-                          {item.location.quarter ? <div>
-                            {item.location.quarter},
-                          </div> : null}
-                          {item.location.locality ? <div>
-                            {item.location.locality},
-                          </div> : null}
-                          <div>
-                            {item.location.fullName}
-                          </div>
-                        </div>
-                      </div>
-                      <div className="mb-4">
-                        <div className="text-2xl font-bold">{parseInt(item.price.amount)} {item.price.currency}</div>
-                        {/* <div>{pricePerm2.toPrecision(2)}</div> */}
-                      </div>
-                      <div className="mb-4">
-                      {mortgageMarketSwapper(item.mortgageMarket)} / {mortgageMarketSwapper(item.mortgageMarket)}
-                      </div>
-                      <div>
-                        {item.totalArea}m<sup>2</sup> / {parseInt(item.noOfRooms)} {(parseInt(item.noOfRooms)===1) ? 'Pokój' :
-                        ((parseInt(item.noOfRooms)<=4) ? 'Pokoje' : "Pokoi")} / {parseInt(item.floorNo)} Piętro
-                      </div>
-                    </div>
-                  </Link>
+              <RealEstateCard sold={true} index={index} key={index} item={item} />
             )
           })}
         </div>

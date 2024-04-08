@@ -61,7 +61,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                             <PhotoComponent images={response.images} title={response.headerAdvertisement}/>
                             <div className="px-10 pb-10">
                                 <h1 className="text-4xl font-bold mb-14">{response.headerAdvertisement}</h1>
-                                <div className="w-full flex flex-row flex-wrap items-center justify-around mb-14">
+                                {(response.totalArea || response.noOfRooms || response.noOfBathrooms || response.floorNo) && <div className="w-full flex flex-row flex-wrap items-center justify-around mb-14">
                                     {response.totalArea ?
                                     <div>
                                         <div className="flex flex-col gap-y-2.5 items-center">
@@ -98,7 +98,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                                         </div> 
                                     </div>
                                     : null}
-                                </div>
+                                </div>}
                                 <ScrollComponent />
                                 <h3 id="description" className="text-3xl font-bold mb-14">Opis</h3>
                                 <p className="mb-14" dangerouslySetInnerHTML={{ __html: response.description }}></p>
@@ -107,20 +107,23 @@ export default async function Page({ params }: { params: { slug: string } }) {
                                 <div className="flex flex-col w-full items-start text-xl gap-y-2.5">
                                     <RowComponent label={"Rynek"} data={mortgageMarketSwapper(response.mortgageMarket)}/>
                                     <RowComponent label={"Cena"} data={`${parseInt(response.price.amount)} ${response.price.currency}`}/>
-                                    <RowComponent label={"Powierzchnia"} data={`${response.totalArea}m<sup>2</sup>`}/>
+                                    <RowComponent label={"Powierzchnia"} data={`${response.totalArea ? response.totalArea : response.lotArea} m<sup>2</sup>`}/>
                                     <RowComponent label={"Liczba pokoi"} data={parseInt(response.noOfRooms)}/>
                                     <RowComponent label={"Piętro"} data={parseInt(response.floorNo)}/>
                                     <RowComponent label={"Rodzaj nieruchomości"} data={objectTypeSwapper(response.objectType)}/>
                                     <RowComponent label={"Stan nieruchomości"} data={conditionSwapper(response.condition)}/>
                                     <RowComponent label={"Umeblowanie"} data={furnishedTypeSwapper(response.furnishedType)}/>
                                 </div>
-                                <h4 className="text-2xl font-bold my-14">Opis budynku</h4>
-                                <div className="flex flex-col w-full items-start text-xl  gap-y-2.5">
-                                    <RowComponent label={"Rodzaj budynku"} data={buildingTypeSwapper(response.buildingType)}/>
-                                    <RowComponent label={"Rok budowy"} data={`${parseInt(response.yearBuilt)}`}/>
-                                    <RowComponent label={"Materiał"} data={materialSwapper(response.material)}/>
-                                    <RowComponent label={"Liczba pięter"} data={parseInt(response.noOfFloors)}/>
-                                </div>
+                                {(response.yearBuilt || response.buildingType || response.material || response.noOfFloors) && <>
+                                    <h4 className="text-2xl font-bold my-14">Opis budynku</h4>
+                                    <div className="flex flex-col w-full items-start text-xl  gap-y-2.5">
+                                        <RowComponent label={"Rodzaj budynku"} data={buildingTypeSwapper(response.buildingType)}/>
+                                        <RowComponent label={"Rok budowy"} data={`${response.yearBuilt ? parseInt(response.yearBuilt) : ''}`}/>
+                                        <RowComponent label={"Materiał"} data={materialSwapper(response.material)}/>
+                                        <RowComponent label={"Liczba pięter"} data={parseInt(response.noOfFloors)}/>
+                                    </div>
+                                </>
+                                }
                                 <h4 className="text-2xl font-bold my-14">Informacje dodatkowe</h4>
                                 <div className="flex flex-col w-full items-start text-xl gap-y-2.5">
                                     <RowComponent label={"Ciepła woda"} data={`${response.hotWaterList.map(item =>{

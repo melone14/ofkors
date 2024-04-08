@@ -86,6 +86,34 @@ const theme = createTheme({
                   }
             }
         }
+      },
+      MuiMenuItem: {
+        styleOverrides: {
+            root: {
+                backgroundColor: "#ff5f6d",
+                color: '#FFFFFF',
+                "&:focus": {
+                    backgroundColor: "#f7d4a3",
+                  },
+                  "&:hover": {
+                    backgroundColor: "#f5959e",
+                  },
+                  "&.Mui-selected":{
+                    backgroundColor: "#f5959e",
+                    "&:hover": {
+                        backgroundColor: "#f5959e",
+                    }
+                  }
+            }
+        }
+      },
+      MuiList: {
+        styleOverrides: {
+            root: {
+                paddingTop: '0px',
+                paddingBottom: '0px',
+            }
+        }
       }
     },
   });
