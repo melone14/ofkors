@@ -37,22 +37,8 @@ const wartosci = [
 export default function Page() {
   return (
     <>
-      <h1 className="my-20 mb-5 text-6xl text-medium text-center hidden">Sprzedaj z Nami</h1>
-      <div className="w-full flex flex-col items-center mt-10">
-        <div className="flex flex-col lg:flex-row items-center justify-center w-full flex-wrap px-5 gap-10 max-w-[85rem] mb-20">
-          {wartosci.map((item, index)=>{
-            return (
-              <div className="w-full px-5 md:px-0 md:w-96 flex flex-col items-center" key={index}>
-                <div className="rounded-xl bg-[#ffc371] h-16 w-16 flex flex-col items-center justify-center mb-4">
-                  {item.icon}
-                </div>
-                <div className="text-center text-xl">{item.text}</div>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-      <h2 className="text-3xl md:text-4xl mb-20 text-center">Oczywiste są dla nas</h2>
+      <h1 className="my-20 text-6xl text-medium text-center hidden">Sprzedaj z Nami</h1>
+      <h2 className="text-3xl md:text-4xl mb-5 text-center">Oczywiste są dla nas</h2>
       <div className="flex flex-col md:flex-row items-center justify-center gap-10 mb-20 md:mb-10 md:px-5">
         <div className="flex flex-col items-center justify-center gap-5 text-white w-60 h-60 rounded-full bg-[#47141e] shadow-2xl">
           <div><PiHandshake style={{ fontSize: "2.5rem"}}/></div>
@@ -75,6 +61,20 @@ export default function Page() {
           <div className="text-2xl">Skuteczność</div>
         </div>
         <div className=" md:w-1/2 max-w-[30rem] text-xl text-center px-5 md:px-0">To sens naszego działania. Na końcu transakcji liczy się efekt. Dzięki temu od wielu lat pracujemy na poleceniach.</div>
+      </div>
+      <div className="w-full flex flex-col items-center mb-20">
+        <div className="flex flex-col lg:flex-row items-center justify-center w-full flex-wrap px-5 gap-10 max-w-[85rem]">
+          {wartosci.map((item, index)=>{
+            return (
+              <div className="w-full px-5 md:px-0 md:w-96 flex flex-col items-center" key={index}>
+                <div className="rounded-xl bg-[#ffc371] h-16 w-16 flex flex-col items-center justify-center mb-4">
+                  {item.icon}
+                </div>
+                <div className="text-center text-xl">{item.text}</div>
+              </div>
+            )
+          })}
+        </div>
       </div>
       <ContactSection/>
     </>

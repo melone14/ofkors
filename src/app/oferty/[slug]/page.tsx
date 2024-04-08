@@ -60,7 +60,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
                         <div className="w-full shadow-2xl rounded-2xl">
                             <PhotoComponent images={response.images} title={response.headerAdvertisement}/>
                             <div className="px-10 pb-10">
-                                <h1 className="text-4xl font-bold mb-14">{response.headerAdvertisement}</h1>
+                                <h1 className="text-3xl font-bold mb-14">{response.headerAdvertisement}</h1>
                                 {(response.totalArea || response.noOfRooms || response.noOfBathrooms || response.floorNo) && <div className="w-full flex flex-row flex-wrap items-center justify-around mb-14">
                                     {response.totalArea ?
                                     <div>
