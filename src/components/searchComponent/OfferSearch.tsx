@@ -93,7 +93,7 @@ const theme = createTheme({
                 backgroundColor: "#ff5f6d",
                 color: '#FFFFFF',
                 "&:focus": {
-                    backgroundColor: "#f7d4a3",
+                    backgroundColor: "#f5959e",
                   },
                   "&:hover": {
                     backgroundColor: "#f5959e",
