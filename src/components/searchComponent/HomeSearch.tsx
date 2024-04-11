@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link"
-import { useState, useCallback } from "react";
+import { useState, useEffect } from "react";
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -66,18 +66,18 @@ const theme = createTheme({
       MuiMenuItem: {
         styleOverrides: {
             root: {
-                backgroundColor: "#ffc371",
+                backgroundColor: "rgba(71, 20, 30, 0.7)",
                 color: '#FFFFFF',
                 "&:focus": {
-                    backgroundColor: "#f7d4a3",
+                    backgroundColor: "rgb(71, 20, 30)",
                   },
                   "&:hover": {
-                    backgroundColor: "#f7d4a3",
+                    backgroundColor: "rgb(71, 20, 30)",
                   },
                   "&.Mui-selected":{
-                    backgroundColor: "#f7d4a3",
+                    backgroundColor: "rgb(71, 20, 30)",
                     "&:hover": {
-                        backgroundColor: "#f7d4a3",
+                        backgroundColor: "rgba(71, 20, 30)",
                     }
                   }
             }
@@ -96,9 +96,8 @@ const theme = createTheme({
 
 export const SearchComponent = () => {
 
-    const [objectType, setobjectType] = useState('mieszkanie');
-    const [rentingType, setRentingType] = useState('pierwotny');
-    const [sellingType, setsellingType] = useState('sprzedaz');
+    const [objectType, setobjectType] = useState('');
+    const [sellingType, setsellingType] = useState('');
     
     const [areaMin, setareaMin] = useState('');
     const [areaMax, setareaMax] = useState('');
@@ -120,27 +119,34 @@ export const SearchComponent = () => {
     const [showFilters, setshowFilters] = useState(false);
 
     const isAnyUrlParam = () =>{
-        let params = `typObiektu=${objectType}&typRynku=${rentingType}&typSprzedazy=${sellingType}`
+        let params = ``
+        if (objectType) {
+            params += `typObiektu=${objectType}&`
+        }
+        if (sellingType) {
+            params += `typSprzedazy=${sellingType}&`
+        }
         if (priceMax) {
-            params += `&cenaDo=${priceMax}`
+            params += `cenaDo=${priceMax}&`
         }
         if (priceMin) {
-            params += `&cenaOd=${priceMin}`
+            params += `cenaOd=${priceMin}&`
         }
         if (areaMax) {
-            params += `&powierzchniaDo=${areaMax}`
+            params += `powierzchniaDo=${areaMax}&`
         }
         if (areaMin) {
-            params += `&powierzchniaOd=${areaMin}`
+            params += `powierzchniaOd=${areaMin}&`
         }
         if (location) {
-            params += `&lokalizacja=${location}`
+            params += `lokalizacja=${location}&`
         }
 
         return params
     }
 
     const urlValue = `${routes.offers}?${isAnyUrlParam()}`
+
 
     return (
         <ThemeProvider theme={theme}>

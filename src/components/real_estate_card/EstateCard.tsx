@@ -21,8 +21,19 @@ export const RealEstateCard = ({ index, item, sold }: { index: number; item: Rea
                         {sold && <div className='absolute top-4 right-4 p-3 bg-[#47141e] text-white rounded-xl'>Sprzedane</div>}
                         <img className="rounded-t-lg w-full h-[300px] object-cover" src={`https://img.asariweb.pl/normal/${mainImage.idi}`} alt={item.headerAdvertisement} />
                     </div>
-                    <div className="p-5 w-full">
-                      <div className="flex flex-row items-center gap-x-2.5 mx-auto mb-8">
+                    <div className="p-5 w-full h-full flex flex-col items-start gap-5">
+                      <div className="text-2xl flex flex-row flex-wrap font-bold">
+                        {item.headerAdvertisement}
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold">{parseInt(item.price.amount)} {item.price.currency}</div>
+                        {/* <div>{pricePerm2.toPrecision(2)}</div> */}
+                      </div>
+                      {(item.totalArea || item.noOfRooms || item.floorNo) && <div>
+                        {item.totalArea}m<sup>2</sup> / {parseInt(item.noOfRooms)} {(parseInt(item.noOfRooms)===1) ? 'Pokój' :
+                        ((parseInt(item.noOfRooms)<=4) ? 'Pokoje' : "Pokoi")} / {parseInt(item.floorNo)} Piętro
+                      </div>}
+                      <div className="flex flex-row items-center gap-x-2.5">
                         <PlaceIcon/>
                         <div className="flex flex-row items-center flex-wrap gap-x-2.5">
                           <div>
@@ -38,17 +49,6 @@ export const RealEstateCard = ({ index, item, sold }: { index: number; item: Rea
                             {item.location.fullName}
                           </div>
                         </div>
-                      </div>
-                      <div className="mb-8">
-                        <div className="text-2xl font-bold">{parseInt(item.price.amount)} {item.price.currency}</div>
-                        {/* <div>{pricePerm2.toPrecision(2)}</div> */}
-                      </div>
-                      {(item.totalArea || item.noOfRooms || item.floorNo) && <div className="mb-4">
-                        {item.totalArea}m<sup>2</sup> / {parseInt(item.noOfRooms)} {(parseInt(item.noOfRooms)===1) ? 'Pokój' :
-                        ((parseInt(item.noOfRooms)<=4) ? 'Pokoje' : "Pokoi")} / {parseInt(item.floorNo)} Piętro
-                      </div>}
-                      <div className="text-2xl flex flex-row flex-wrap font-bold">
-                        {item.headerAdvertisement}
                       </div>
                     </div>
                   </Link>

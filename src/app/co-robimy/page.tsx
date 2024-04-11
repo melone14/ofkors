@@ -2,9 +2,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { Divider } from "@mui/material";
 
-import HandshakeIcon from '@mui/icons-material/Handshake';
-import LocalPoliceIcon from '@mui/icons-material/LocalPolice';
-import LeaderboardIcon from '@mui/icons-material/Leaderboard';
+import './style.css';
 
 import { FaBuildingCircleCheck } from "react-icons/fa6";
 import { CiSquareCheck } from "react-icons/ci";
@@ -62,7 +60,7 @@ export default function Page() {
         </div>
         <div className=" md:w-1/2 max-w-[30rem] text-xl text-center px-5 md:px-0">To sens naszego działania. Na końcu transakcji liczy się efekt. Dzięki temu od wielu lat pracujemy na poleceniach.</div>
       </div>
-      <div className="w-full flex flex-col items-center mb-20">
+      <div className="w-full flex flex-col items-center mt-20 wartosci py-20">
         <div className="flex flex-col lg:flex-row items-center justify-center w-full flex-wrap px-5 gap-10 max-w-[85rem]">
           {wartosci.map((item, index)=>{
             return (
@@ -70,7 +68,7 @@ export default function Page() {
                 <div className="rounded-xl bg-[#ffc371] h-16 w-16 flex flex-col items-center justify-center mb-4">
                   {item.icon}
                 </div>
-                <div className="text-center text-xl">{item.text}</div>
+                <div className="text-center text-xl text-white">{item.text}</div>
               </div>
             )
           })}

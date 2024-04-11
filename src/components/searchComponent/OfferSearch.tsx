@@ -120,9 +120,8 @@ const theme = createTheme({
 
 export const OfferSearchComponent = () => {
 
-    const [objectType, setobjectType] = useState('mieszkanie');
-    const [rentingType, setRentingType] = useState('pierwotny');
-    const [sellingType, setsellingType] = useState('sprzedaz');
+    const [objectType, setobjectType] = useState('');
+    const [sellingType, setsellingType] = useState('');
     
     const [areaMin, setareaMin] = useState('');
     const [areaMax, setareaMax] = useState('');
@@ -144,21 +143,27 @@ export const OfferSearchComponent = () => {
     const [showFilters, setshowFilters] = useState(false);
 
     const isAnyUrlParam = () =>{
-        let params = `typObiektu=${objectType}&typRynku=${rentingType}&typSprzedazy=${sellingType}`
+        let params = ``
+        if (objectType) {
+            params += `typObiektu=${objectType}&`
+        }
+        if (sellingType) {
+            params += `typSprzedazy=${sellingType}&`
+        }
         if (priceMax) {
-            params += `&cenaDo=${priceMax}`
+            params += `cenaDo=${priceMax}&`
         }
         if (priceMin) {
-            params += `&cenaOd=${priceMin}`
+            params += `cenaOd=${priceMin}&`
         }
         if (areaMax) {
-            params += `&powierzchniaDo=${areaMax}`
+            params += `powierzchniaDo=${areaMax}&`
         }
         if (areaMin) {
-            params += `&powierzchniaOd=${areaMin}`
+            params += `powierzchniaOd=${areaMin}&`
         }
         if (location) {
-            params += `&lokalizacja=${location}`
+            params += `lokalizacja=${location}&`
         }
 
         return params
@@ -172,7 +177,7 @@ export const OfferSearchComponent = () => {
         <div className="w-full flex flex-col gap-y-5">
             <div className="flex flex-col md:flex-row w-full justify-between items-center gap-x-5 gap-y-5">
             <div className="flex flex-col md:flex-row w-full justify-between items-center gap-x-5 max-w-4xl gap-y-5">
-                <FormControl fullWidth>
+                <FormControl  className="w-full lg:w-48">
                     <InputLabel id="objectType">Rodzaj obiektu</InputLabel>
                     <Select
                         labelId="objectType"
@@ -191,7 +196,7 @@ export const OfferSearchComponent = () => {
                         <MenuItem value={'obiekt'}>Obiekt</MenuItem>
                     </Select>
                 </FormControl>
-                <FormControl fullWidth>
+                <FormControl  className="w-full lg:w-48">
                     <InputLabel id="sellingType">Rodzaj transkacji</InputLabel>
                     <Select
                     labelId="sellingType"
@@ -207,7 +212,8 @@ export const OfferSearchComponent = () => {
                         <MenuItem value={'wynajem'}>Wynajem</MenuItem>
                     </Select>
                 </FormControl>
-                    <TextField 
+                <div className="w-full lg:w-64">
+                <TextField 
                         fullWidth id="location-input" 
                         label="Miejscowośc lub dzielnica" 
                         variant="outlined"
@@ -216,7 +222,8 @@ export const OfferSearchComponent = () => {
                             setlocation(event.target.value)
                         }}>
                     </TextField>
-            </div>
+                </div>
+                </div>
                 <OfkorsButton 
                     className="px-5 w-full md:w-auto bg-[#ff5f6d]" 
                     variant="contained"
