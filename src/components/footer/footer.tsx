@@ -20,7 +20,7 @@ export const Footer = () => {
                 <div className='flex flex-col md:flex-row md:items-start  md:gap-x-10 lg:gap-x-20 gap-10 w-full'>
                     <div>
                         <div className='mb-2'>
-                            <Link className='transition ease-in-out hover:text-[#ff5f6d]' href="mailto:biuro@ofkoprs.pl">
+                            <Link className='transition ease-in-out hover:text-[#ff5f6d]' href="mailto:biuro@ofkors.pl">
                                 <Email className='mr-2.5'/>biuro@ofkors.pl
                             </Link>
                         </div>

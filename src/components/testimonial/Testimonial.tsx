@@ -1,21 +1,23 @@
 'use client'
 
-import Image from "next/image";
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { Rating } from "@mui/material";
 
 
-import Agents from "@/images/joannaDarek/ofkors agents.jpg"
 
 
 const Opinions = [
-    {id: 0, name: "p. Kamil", rating: 5, descrition: 'Współpraca z biurem "Ofkors" była dla mnie niesamowicie pozytywnym doświadczeniem. Ich profesjonalizm i zaangażowanie sprawiły, że sprzedaż mojego mieszkania przebiegła sprawnie i bezproblemowo. Polecam z całego serca!', jobRole: 'CEO, Spexo'},
-    {id: 1, name: "Robert K", rating: 5, descrition: 'Biuro "Ofkors" to zespół ludzi, którzy naprawdę wiedzą, co robią. Ich strategia sprzedażowa była trafna, a obsługa klienta na najwyższym poziomie. Bardzo doceniam ich pomoc i gorąco polecam każdemu, kto szuka skutecznego partnera w sprzedaży nieruchomości.', jobRole: 'CEO, Spexo'},
-    {id: 2, name: "Marta P", rating: 5, descrition: 'Biuro "Ofkors" okazało się niezawodnym partnerem w procesie sprzedaży mojego mieszkania. Ich troskliwe podejście do moich potrzeb oraz skuteczne działania przyniosły oczekiwane rezultaty. Dzięki nim mogłam bez obaw oddać się całemu procesowi. Szczerze polecam!', jobRole: 'CEO, Spexo'},
-    {id: 4, name: "Ania K", rating: 5, descrition: 'Współpraca na 5 gwiazdek. Pełny profesjonalizm w każdym calu. Od pierwszego spotkania po przekazanie kluczy czyłam wspracie. Polecam z czystym sumieniem.', jobRole: 'CEO'},
-]
+    {id: 0, name: "Jakub Bogucki", rating: 5, descrition: 'Ofkors Nieruchomości to biuro z którego usług korzystałem przy sprzedaży swojego mieszkania. Jestem bardzo zadowolony. Profesjonalnie, szybko i w cenie, którą chciałem otrzymać za moją nieruchomość. Sam nic nie musiałem robić, wszystkim zajęli się p.Joanna z p.Darkiem. Życzę Państwu powodzenia przy kolejnych transakcjach. Będę polecać Wasze biuro!'},
+    {id: 1, name: "Marlena B.", rating: 5, descrition: 'Profesjonalizm! To słowo, które najlepiej opisuje Państwa podejście do tematu sprzedaży nieruchomości. Jestem pod ogromnym wrażeniem zaangażowania i energii z jaką Państwo działacie. Dziękuję za wsparcie mnie w sprzedaży mojego mieszkania. Na każdym etapie czułam się zaopiekowana, od początku wiedziałam, że jestem w dobrych rękach. Serdecznie dziękuję.'},
+    {id: 2, name: "Lidia i Paweł Stankiewicz", rating: 5, descrition: 'Jesteśmy bardzo zadowoleni ze współpracy z biurem Ofkors Nieruchomości. Chcielibyśmy serdecznie podziękować Panu Dariuszowi za profesjonalizm, zaangażowanie i cierpliwość na każdym etapie procesu zakupu nieruchomości. Dzięki Pana pomocy cieszymy się naszym nowym mieszkaniem.'},
+    {id: 4, name: "Marta i Paweł K.", rating: 5, descrition: 'Bardzo profesjonalna i rzetelna obsługa p.Joanny z Ofkors Nieruchomości sprawiła, że dziś cieszymy się z naszego nowego domu. Pani Joanna to osoba niezwykle zaangażowana, pełna pomysłów i fachowych rad. Dzięki Niej sprzedaliśmy nasze mieszkanie szybko i za dobre pieniądze. Bardzo dziękujemy i będziemy Panią polecać!' },
+    {id: 5, name: "", rating: 5, descrition: 'Pan Dariusz z Ofkors Nieruchomości to specjalista w każdym calu. Od samego początku wiedzieliśmy, że trafiliśmy na osobę, która zna się na rzeczy. Świetne wyczucie rynku, fachowe porady dotyczące przygotowania mieszkania do sprzedaży sprawiły, że sprzedaliśmy je w 2 tygodnie! Dziękujemy i pozdrawiamy.' },
+    {id: 6, name: "Katarzyna Adaszewska", rating: 5, descrition: 'Profesjonalne podejście od pierwszego spotkania to wyróżnik Pani Joanny z Ofkors Nieruchomości. Perfekcyjnie przeprowadziła sprzedaż naszego mieszkania. Świetny kontakt oraz empatyczne podejście do nas jako klientów dało się czuć na każdym etapie transakcji. Z czystym sumieniem będziemy polecać. Dziękujemy za pomoc:)' },
+    {id: 7, name: "Daniel Kowalczyk", rating: 5, descrition: 'Bardzo polecamy współpracę z p.Dariuszem Czajka. Sprzedaliśmy z Nim mieszkanie w Warszawie. Tłumaczył nam cierpliwie wszelkie niejasności i rozładowywał emocje, gdy wymagała tego sytuacja. Dzięki Niemu sprawie przeszliśmy przez całą transakcję. Polecamy p.Dariusza do współpracy, to człowiek godny zaufania.' },
+    {id: 8, name: "Dariusz i Anna Bukowscy", rating: 5, descrition: 'Pani Joanna to osoba kompetentna i profesjonalna, która świetnie zna rynek nieruchomości. Nasza współpraca układała się perfekcyjnie. Jesteśmy bardzo zadowoleni zarówno z komunikacji z p.Joanną oraz z efektu finalnego czyli wysokiej ceny za nieruchomość, którą sprzedaliśmy. Dziękujemy!' },
+  ]
 
 
 export const Testimonial = ({currentOpinion} : {currentOpinion: any}) => {
@@ -23,11 +25,11 @@ export const Testimonial = ({currentOpinion} : {currentOpinion: any}) => {
     return (
         <>
             <div className="flex flex-row items-center justify-center my-10 max-w-[35rem] w-96 h-96 rounded-full shadow-2xl bg-[#FAF8F6] p-5">
-                <div className={` flex flex-col justify-center items-center gap-y-5 md:gap-y-10 opinion-container`}>
+                <div className={` flex flex-col justify-center items-center gap-y-5 opinion-container`}>
                     <div><Rating sx={{ '& .MuiRating-iconFilled': {
                         color: '#47141e',
                     },}} readOnly value={currentOpinion.rating} /></div>
-                    <div className="max-w-[20rem] text-md md:text-lg text-center min-h-40">&apos;{currentOpinion.descrition}&apos;</div>
+                    <div className="max-w-[20rem] text-md text-center min-h-40">{currentOpinion.descrition}</div>
                     <div>{currentOpinion.name}</div>
                 </div>
             </div>

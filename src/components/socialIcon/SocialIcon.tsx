@@ -11,28 +11,28 @@ export const SocialIconComponent = ({item} : {item: SocialUrl}) => {
 
     if (item.name === 'facebook')  {
         return (
-            <Link className={classOptions} href={item.url}>
+            <Link target="blank" className={classOptions} href={item.url}>
                 <Facebook />
             </Link>
         )
     }
     if (item.name === 'instagram')  {
         return (
-            <Link className={classOptions}  href={item.url}>
+            <Link target="blank" className={classOptions}  href={item.url}>
                 <Instagram />
             </Link>
         )
     }
     if (item.name === 'linkedin')  {
         return (
-            <Link className={classOptions} href={item.url}>
+            <Link target="blank" className={classOptions} href={item.url}>
                 <LinkedIn />
             </Link>
         )
     }
     if (item.name === 'twitter')  {
             return (
-                <Link className={classOptions} href={item.url}>
+                <Link target="blank" className={classOptions} href={item.url}>
                     <X />
                 </Link>
             )

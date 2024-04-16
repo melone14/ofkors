@@ -18,7 +18,7 @@ export const RealEstateCard = ({ index, item, sold }: { index: number; item: Rea
                 <Link href={`${routes.offers}/${item.slug}`} key={index} className="rounded-lg transition ease-in-out hover:shadow-2xl 
                 flex flex-col shadow-xl w-[20rem] md:w-[32rem]">
                     <div className='relative rounded-t-lg w-full h-[300px]'>
-                        {sold && <div className='absolute top-4 right-4 p-3 bg-[#47141e] text-white rounded-xl'>Sprzedane</div>}
+                        {sold && <div className='absolute top-4 right-4 p-3 bg-[#47141e] text-white rounded-xl'>{item.sellType === 'sell' ? 'Sprzedane' : 'Wynajęte'}</div>}
                         <img className="rounded-t-lg w-full h-[300px] object-cover" src={`https://img.asariweb.pl/normal/${mainImage.idi}`} alt={item.headerAdvertisement} />
                     </div>
                     <div className="p-5 w-full h-full flex flex-col items-start gap-5">

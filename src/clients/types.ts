@@ -138,6 +138,7 @@ export interface RealEstateObject {
     id: number;
     slug: string;
     ido: number;
+    sellType: 'rent' | 'sell';
     objectType: objectType;
     hotWaterList: hotWaterList[]; //to do
     spaceFloorList: spaceFloorList[]; //to fdo

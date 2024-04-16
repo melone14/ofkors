@@ -90,6 +90,13 @@ const theme = createTheme({
                 paddingBottom: '0px',
             }
         }
+      },
+      MuiPaper: {
+        styleOverrides: {
+            root: {
+                backgroundColor: 'transparent',
+            }
+        }
       }
     },
   });

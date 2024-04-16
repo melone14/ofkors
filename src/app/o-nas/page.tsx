@@ -20,7 +20,7 @@ export default async function Page() {
 
     return (
         <>
-        <div className="px-5 lg:px-0 text-4xl font-bold gradient-text md:my-20 text-center">Ofkors Nieruchomości – Twój wybór jest oczywisty</div>
+        <div className="px-5 lg:px-0 text-4xl font-bold gradient-text md:my-20 text-center">Ofkors Nieruchomości</div>
         <div className="md:my-20 text-6xl text-medium hidden">O Nas</div>
         <div className="flex w-full px-10 flex-col lg:flex-row items-center p-5 lg:px-10 justify-center gap-10 mb-10">
             <Image className="w-full lg:w-1/3 rounded-xl shadow-xl" src={Agents} alt="Agenci Nieruchomości" />
@@ -31,7 +31,7 @@ export default async function Page() {
               </div>
             </div>
         </div>
-        <div className="my-20 text-3xl text-medium">Nasz Zespół</div>
+        <div className="my-20 text-3xl text-medium text-[#ff5f6d]">Poznaj Nas</div>
         <div className="w-full flex flex-row flex-wrap items-center justify-center gap-x-5 gap-y-5 mb-10">
           {response.map((item, index)=>{
             return (
