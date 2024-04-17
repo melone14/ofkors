@@ -16,10 +16,12 @@ type Props = {
 export const AgentComponent:FC<Props> = ({agent, isOffer}) => {
     return (
         <>
-            <Link className="w-80 lg:w-full max-w-96 py-10 text-white rounded-2xl bg-[#47141e]
-            flex flex-col items-center " href={`${routes.agents}/${agent.slug}`}>
+            <div className="w-80 lg:w-full max-w-96 py-10 text-white rounded-2xl bg-[#47141e]
+            flex flex-col items-center ">
             {isOffer ? <div className="text-3xl mb-5">Opiekun Oferty</div> : null}
-                <img className="h-52 w-52 rounded-full mb-5" src={agent?.img || ''} alt={agent?.name}/>
+            <Link className="h-52 w-52 rounded-full mb-5" href={`${routes.agents}/${agent.slug}`}>
+                <img className="h-52 w-52 rounded-full" src={agent?.img || ''} alt={agent?.name}/>
+            </Link>
             <div className="text-3xl mb-5 mx-5 text-center">
                 {agent?.name}
             </div>
@@ -43,7 +45,7 @@ export const AgentComponent:FC<Props> = ({agent, isOffer}) => {
                     <SocialIconComponent key={index} item={item}/>
                     )
                 })}</div>
-        </Link>
+        </div>
         </>
     )
 }

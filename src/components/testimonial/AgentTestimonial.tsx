@@ -55,7 +55,6 @@ const responsive = {
 };
 
 export const AgentTestimonialComponent = ({ data } : {data: Opinion[]}) => {
-  console.log(data)
   const customLeftArrow = (
     <div className="absolute arrow-btn left-0 text-center py-3 cursor-pointer bg-[#47141e] rounded-full text-white mx-3 w-10 h-10 flex flex-col justify-center items-center">
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">

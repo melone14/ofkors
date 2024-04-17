@@ -31,7 +31,7 @@ export default async function Page() {
               </div>
             </div>
         </div>
-        <div className="my-20 text-3xl text-medium text-[#ff5f6d]">Poznaj Nas</div>
+        <div className="my-20 text-4xl text-medium font-bold text-[#ff5f6d]">Poznaj Nas</div>
         <div className="w-full flex flex-row flex-wrap items-center justify-center gap-x-5 gap-y-5 mb-10">
           {response.map((item, index)=>{
             return (
