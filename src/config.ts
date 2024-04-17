@@ -5,7 +5,9 @@ export const routes = {
     offers: '/oferty',
     aboutUs: '/o-nas',
     agents: '/nasi-agenci',
-    blog: '/blog'
+    blog: '/blog',
+    privacyPolicy: '/polityka-prywatnosci',
+    regulamin: '/regulamin-strony',
 }
 
 

@@ -1,10 +1,12 @@
 'use client'
 
 import { useState, FormEvent } from "react";
-import { TextField, Button } from "@mui/material"
+import { TextField, Button, Dialog, IconButton } from "@mui/material"
 import { outlinedInputClasses } from '@mui/material/OutlinedInput';
 import { createTheme, ThemeProvider, Theme, useTheme } from '@mui/material/styles';
+import { Close } from "@mui/icons-material";
 import { API_BASE_URL } from "@/config";
+import { routes } from "@/config";
 
 const customTheme = (outerTheme: Theme) =>
   createTheme({
@@ -71,6 +73,7 @@ const customTheme = (outerTheme: Theme) =>
   export const ContactForm = () => {
     
     const [isSuccess, setIsSucces] = useState(false)
+    const [dialogOpen, setIsdialogOpen] = useState(false)
 
     async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
@@ -122,6 +125,31 @@ const customTheme = (outerTheme: Theme) =>
 
     return (
         <>
+        <Dialog
+          open={dialogOpen}
+          onClose={()=> {
+            setIsdialogOpen(false);
+          }}
+        >
+          <div className="w-[20rem] md:w-full p-10">
+            <div className="w-full flex flex-row-reverse mb-5">
+              <IconButton
+              onClick={()=>{
+                setIsdialogOpen(false);
+              }}>
+                <Close />
+              </IconButton>
+            </div>
+            <span>
+          Administratorem danych osobowych zbieranych za pośrednictwem Strony jest (tutaj należy podać imię i
+          nazwisko / nazwę Sprzedawcy). Dane są lub mogą być przetwarzane w celach oraz na podstawach wskazanych
+          szczegółowo w polityce prywatności (np. realizacja umowy, marketing bezpośredni). Polityka prywatności
+          zawiera pełną informację na temat przetwarzania danych przez administratora wraz z prawami
+          przysługującymi osobie, której dane dotyczą. Szybki kontakt z administratorem: adres email do kontaktu lub
+          tel.: numer telefonu kontaktowego
+            </span>
+          </div>
+        </Dialog>
         <ThemeProvider theme={customTheme(outerTheme)}>
           {!isSuccess ? <form className="w-full px-5" onSubmit={onSubmit}>
             <input type="text" name="dskjhf" />
@@ -134,8 +162,13 @@ const customTheme = (outerTheme: Theme) =>
                 <TextField name="email" sx={{ color: '#FFFFFF'}} variant="standard" label="Email"/>
                 <TextField name="phone_number" variant="standard" label="Numer Telefonu"/>
             </div>
-                <TextField name="message" sx={{ color: '#FFFFFF'}} fullWidth variant="standard" multiline
-                label="Wiadomość"/>
+            <TextField name="message" sx={{ color: '#FFFFFF'}} fullWidth variant="standard" multiline
+            label="Wiadomość"/>
+            <div className="flex items-center">
+              <input id="link-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+              <label htmlFor="link-checkbox" className="ms-2 text-sm font-medium text-gray-900">Potwierdzam, że zapoznałem się i akceptuję <a href={routes.regulamin} className="text-[#47141e] hover:underline">regulamin strony</a> internetowej oraz potwierdzam, że zapoznałem
+się z <a href={routes.privacyPolicy} className="text-[#47141e] hover:underline">polityką prywatności</a> strony internetowego. <button onClick={()=> {setIsdialogOpen(true)}} className="text-[#47141e] hover:underline">Czytaj więcej</button></label>
+            </div>
             <Button
                 type="submit"
                 className="px-10" 
