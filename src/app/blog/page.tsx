@@ -15,11 +15,14 @@ export default async function BlogList() {
     return (
         <>
             <h1 className="mt-20 mb-10 text-6xl text-medium text-center hidden">Z naszego Bloga</h1>
-            {response.posts.map((post, index)=>{
+            {response.posts.length !== 0 && response.posts.map((post, index)=>{
                 return (
                     <BlogCard key={index} article={post} />
                 )
             })}
+            {response.posts.length === 0 && <>
+            <div className="my-20 text-3xl">Tu niebawem znajdziesz interesujące treści z rynku nieruchomości i pracy naszego biura</div>
+            </>}
         </>
     )
 }
