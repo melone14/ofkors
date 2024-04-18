@@ -91,38 +91,202 @@ podstawach, w okresach oraz w następującym zakresie:</div>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            <tr className="bg-white border-b">
+                                <th scope="row" className="px-6 py-4 font-medium text-gray-900">
                                 Wykonanie umowy o
 korzystanie z usługi
 elektronicznej Strony
-
+Internetowej lub
+podjęcie działań na
+żądanie osoby, której
+dane dotyczą, przed
+zawarciem umowy
                                 </th>
                                 <td className="px-6 py-4">
+                                Artykuł 6 ust. 1 lit. b) Rozporządzenia
+RODO (wykonanie umowy) -
+przetwarzanie jest niezbędne do
+wykonania umowy, której stroną jest
+osoba, której dane dotyczą, lub do
+podjęcia działań na żądanie osoby, której
+dane dotyczą, przed zawarciem umowy
+                                </td>
+                                <td className="px-6 py-4">
+                                Dane są przechowywane przez okres
+niezbędny do wykonania, rozwiązania lub
+wygaśnięcia w inny sposób zawartej
+umowy o świadczenie usług
+elektronicznych z Administratorem.
+                                </td>
+                            </tr>
+                            <tr className="bg-white border-b">
+                                <th scope="row" className="px-6 py-4 font-medium text-gray-900">
                                 Marketing
 bezpośredni
-                                </td>
-                            </tr>
-                            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Microsoft Surface Pro
                                 </th>
                                 <td className="px-6 py-4">
-                                    White
+                                Artykuł 6 ust. 1 lit. f) Rozporządzenia
+RODO (prawnie uzasadniony interes
+administratora) - przetwarzanie jest
+niezbędne do celów wynikających z
+prawnie uzasadnionych interesów
+Administratora – polegających na dbaniu
+o interesy i dobry wizerunek
+Administratora oraz dążeniu do
+sprzedaży swoich usług
                                 </td>
                                 <td className="px-6 py-4">
-                                    Laptop PC
+                                Dane są przechowywane przez okres
+istnienia prawnie uzasadnionego
+interesu realizowanego przez
+Administratora, nie dłużej jednak niż
+przez okres przedawnienia roszczeń w
+stosunku do osoby, której dane dotyczą,
+z tytułu prowadzonej przez
+Administratora działalności gospodarczej.
+Okres przedawnienia określają przepisy
+prawa, w szczególności kodeksu
+cywilnego (podstawowy termin
+przedawnienia dla roszczeń związanych z
+prowadzeniem działalności gospodarczej
+
+wynosi trzy lata, a dla umowy sprzedaży
+dwa lata).
+Administrator nie może przetwarzać
+danych w celu marketingu
+bezpośredniego w przypadku wyrażenia
+skutecznego sprzeciwu w tym zakresie
+przez osobę, której dane dotyczą.
                                 </td>
-                            </tr>
-                            <tr className="bg-white dark:bg-gray-800">
-                                <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                    Magic Mouse 2
+                            </tr>                            
+                            <tr className="bg-white border-b">
+                                <th scope="row" className="px-6 py-4 font-medium text-gray-900">
+                                Marketing
                                 </th>
                                 <td className="px-6 py-4">
-                                    Black
+                                Artykuł 6 ust. 1 lit. a) Rozporządzenia
+RODO (zgoda) - osoba, której dane
+dotyczą wyraziła zgodę na przetwarzanie
+swoich danych osobowych w celu
+otrzymywania od Administratora
+informacji marketingowych
                                 </td>
                                 <td className="px-6 py-4">
-                                    Accessories
+                                Dane przechowywane są do momentu
+wycofania zgody przez osobę, której
+dane dotyczą na dalsze przetwarzanie jej
+danych w tym celu.
+                                </td>
+                            </tr>
+                            <tr className="bg-white border-b">
+                                <th scope="row" className="px-6 py-4 font-medium text-gray-900">
+                                Ustalenie,
+dochodzenie lub
+obrona roszczeń jakie
+może podnosić
+Administrator lub
+jakie mogą być
+podnoszone wobec
+Administratora
+                                </th>
+                                <td className="px-6 py-4">
+                                Artykuł 6 ust. 1 lit. f) Rozporządzenia
+RODO - przetwarzanie jest niezbędne do
+celów wynikających z prawnie
+uzasadnionych interesów Administratora
+– polegających na ustaleniu,
+dochodzeniu lub obronie roszczeń jakie
+może podnosić Administrator lub jakie
+mogą być podnoszone wobec
+Administratora
+                                </td>
+                                <td className="px-6 py-4">
+                                Dane są przechowywane przez okres
+istnienia prawnie uzasadnionego
+interesu realizowanego przez
+Administratora, nie dłużej jednak niż
+przez okres przedawnienia roszczeń w
+stosunku do osoby, której dane dotyczą,
+z tytułu prowadzonej przez
+Administratora działalności gospodarczej.
+Okres przedawnienia określają przepisy
+prawa, w szczególności kodeksu
+cywilnego (podstawowy termin
+przedawnienia dla roszczeń związanych z
+prowadzeniem działalności gospodarczej
+wynosi trzy lata).
+                                </td>
+                            </tr>
+                            <tr className="bg-white border-b">
+                                <th scope="row" className="px-6 py-4 font-medium text-gray-900">
+                                Korzystanie ze Strony
+Internetowej i
+zapewnienie jej
+prawidłowego
+działania
+                                </th>
+                                <td className="px-6 py-4">
+                                Artykuł 6 ust. 1 lit. f) Rozporządzenia
+RODO (prawnie uzasadniony interes
+administratora) – przetwarzanie jest
+niezbędne do celów wynikających z
+prawnie uzasadnionych interesów
+Administratora – polegających na
+prowadzeniu i utrzymaniu Strony
+Internetowej
+                                </td>
+                                <td className="px-6 py-4">
+                                Dane są przechowywane przez okres
+istnienia prawnie uzasadnionego
+interesu realizowanego przez
+Administratora, nie dłużej jednak niż
+przez okres przedawnienia roszczeń
+Administratora w stosunku do osoby,
+której dane dotyczą, z tytułu
+prowadzonej przez Administratora
+działalności gospodarczej. Okres
+przedawnienia określają przepisy prawa,
+w szczególności kodeksu cywilnego
+(podstawowy termin przedawnienia dla
+roszczeń związanych z prowadzeniem
+działalności gospodarczej wynosi trzy
+lata).
+                                </td>
+                            </tr>
+                            
+                            <tr className="bg-white border-b">
+                                <th scope="row" className="px-6 py-4 font-medium text-gray-900">
+                                Prowadzenie statystyk
+i analiza ruchu na
+Stronie Internetowej
+                                </th>
+                                <td className="px-6 py-4">
+                                Artykuł 6 ust. 1 lit. f) Rozporządzenia
+RODO (prawnie uzasadniony interes
+administratora) – przetwarzanie jest
+niezbędne do celów wynikających z
+prawnie uzasadnionych interesów
+Administratora – polegających na
+prowadzeniu statystyk i analizie ruchu na
+Stronie Internetowej celem poprawy
+funkcjonowania Strony Internetowej
+                                </td>
+                                <td className="px-6 py-4">
+                                Dane są przechowywane przez okres
+istnienia prawnie uzasadnionego
+interesu realizowanego przez
+Administratora, nie dłużej jednak niż
+przez okres przedawnienia roszczeń
+Administratora w stosunku do osoby,
+której dane dotyczą, z tytułu
+prowadzonej przez Administratora
+działalności gospodarczej. Okres
+przedawnienia określają przepisy prawa,
+w szczególności kodeksu cywilnego
+(podstawowy termin przedawnienia dla
+roszczeń związanych z prowadzeniem
+działalności gospodarczej wynosi trzy
+lata).
                                 </td>
                             </tr>
                         </tbody>
