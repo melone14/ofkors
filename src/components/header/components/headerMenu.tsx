@@ -29,7 +29,7 @@ const customTheme = (outerTheme: Theme) =>
         MuiPaper: {
             styleOverrides: {
                 root: {
-                    backgroundColor: 'rgba(255, 255, 255, 0.8);'
+                    backgroundColor: 'rgba(255, 255, 255, 0.5);'
                 }
             }
         },
@@ -62,7 +62,7 @@ export const HeaderMenu = () => {
             anchor="right"
             open={menuOpen}
             onClose={() => setMenuOpen(false)}>
-                <div className="w-[17rem] flex flex-col justify-center items-center h-full gap-y-5">
+                <div className="w-[15rem] flex flex-col justify-center items-center h-full gap-y-5">
                     <nav className=" flex flex-col justify-center items-center gap-y-5">
                         {MainMenu.map((label, index)=>{
                             return (

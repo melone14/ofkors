@@ -8,6 +8,8 @@ export const routes = {
     blog: '/blog',
     privacyPolicy: '/polityka-prywatnosci',
     regulamin: '/regulamin-strony',
+    facebookPrivacy: '/polityka-prywatnosci-w-serwisie-facebook',
+    instagramPrivacy: '/polityka-prywatnosci-w-serwisie-instagram'
 }
 
 

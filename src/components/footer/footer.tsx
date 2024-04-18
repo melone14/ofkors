@@ -69,9 +69,15 @@ export const Footer = () => {
                 </div>
             </div>
             <div className="w-full flex-wrap flex flex-col 
-        sm:flex-row-reverse gap-5 text-white md:px-20 pb-10">
+        sm:flex-row-reverse gap-5 text-white px-10 md:px-20 pb-10">
+            <div className='flex flex-col sm:flex-row-reverse gap-5 text-white'>
                 <Link className='text-white' href={routes.privacyPolicy}>Polityka Prywatności</Link>
                 <Link className='text-white' href={routes.regulamin}>Regulamin Strony</Link>
+            </div>
+            <div className='flex flex-col sm:flex-row-reverse gap-5 text-white'>
+                <Link className='text-white' href={routes.facebookPrivacy}>Polityka Prywatności Facebook</Link>
+                <Link className='text-white' href={routes.instagramPrivacy}>Polityka Prywatności Instagram</Link>
+            </div>
             </div>
         </footer>
     )

@@ -75,9 +75,9 @@ export default function Page () {
 podejmowanych przez danego użytkownika na Stronie Internetowej.</div>
 <div className="mb-5">Administrator może przetwarzać dane osobowe na Stronie Internetowej w następujących celach, na następujących
 podstawach, w okresach oraz w następującym zakresie:</div>
-                <div className="relative flex flex-col items-center overflow-x-auto w-full mb-10">
-                    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <div className="w-80 md:w-full overflow-x-auto mb-10">
+                    <table className="w-full text-sm text-left rtl:text-right text-gray-500">
+                        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700">
                             <tr>
                                 <th scope="col" className="px-6 py-3">
                                 Cel przetwarzania danych
@@ -370,10 +370,121 @@ lata).
                 zarządzania plikami Cookies z poziomu przeglądarki.</div>
                 <div className="mb-5">Pliki Cookies, które mogą być wysyłane przez Stronę Internetową można podzielić na różne rodzaje, według
                 następujących kryteriów:</div>
-                {/* //tabela */}
+                <div className="w-80 md:w-full overflow-x-auto mb-10">
+                    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <tr>
+                                <th scope="col" className="px-6 py-3">
+                                Ze względu na ich dostawcę:
+                                </th>
+                                <th scope="col" className="px-6 py-3">
+                                Ze względu na ich okres
+przechowywania na urządzeniu
+osoby odwiedzającej Stronę
+Internetową:
+                                </th>
+                                <th scope="col" className="px-6 py-3">
+                                Ze względu na cel ich stosowania:
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr className="bg-white border-b">
+                                <th scope="row" className="px-6 py-4 font-medium text-gray-900">
+                                    <ol className="space-y-4 list-decimal">
+                                        <li>własne (tworzone przez
+    Stronę Internetową
+    Administratora) oraz</li>
+    <li>należące do
+    osób/podmiotów trzecich
+    (innych niż Administrator)</li>
+                                    </ol>
+                                </th>
+                                <td className="px-6 py-4">
+                                <ol className="space-y-4 list-decimal">
+                                        <li>własne (tworzone przez
+    Stronę Internetową
+    Administratora) oraz</li>
+    <li>stałe (przechowywane przez
+określony czas, zdefiniowany
+przez parametry każdego pliku
+lub do czasu ręcznego
+usunięcia)</li>
+                                    </ol>
+                                </td>
+                                <td className="px-6 py-4">
+                                <ol className="space-y-4 list-decimal">
+                                        <li>niezbędne (umożliwiające
+prawidłowe funkcjonowanie
+Strony Internetowej),</li>
+    <li>funkcjonalne/preferencyjne
+(umożliwiające dostosowanie
+Strony Internetowej do
+preferencji osoby odwiedzającej
+stronę),</li>
+<li>analityczne i wydajnościowe
+(gromadzące informacje o
+sposobie korzystania ze Strony
+Internetowej)
+marketingowe, reklamowe i
+społecznościowe (zbierające
+informacje o osobie
+odwiedzającej Stronę
+Internetową w celu wyświetlania
+tej osobie reklam, ich
+personalizacji, mierzeniu
+skuteczności i prowadzenia
+innych działań marketingowych w
+tym również na stronach
+internetowych odrębnych od
+niniejszej Strony, takich jak
+portale społecznościowe albo
+inne strony należące do tych
+samych sieci reklamowych co
+Strona Internetowa)</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div className="mb-5">Administrator może przetwarzać dane zawarte w plikach Cookies podczas korzystania przez odwiedzających ze Strony
                 Internetowej w następujących konkretnych celach:</div>
-                {/* //tabela */}
+                <div className="w-80 md:w-full overflow-x-auto mb-10">
+                    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                        <tbody>
+                            <tr className="bg-white border-b">
+                                <th scope="row" className="px-6 py-4 font-medium text-gray-900">
+                                Cele stosowanie plików Cookies
+Strony Internetowej
+Administratora
+                                </th>
+                                <td className="px-6 py-4">
+                                <ol className="space-y-4 list-decimal">
+                                        <li>zapamiętywania danych z wypełnianych formularzy (pliki Cookies niezbędne
+lub/i funkcjonalne/preferencyjne)</li>
+    <li>dostosowywania zawartości Strony Internetowej do indywidualnych
+preferencji użytkownika (np. dotyczących kolorów, rozmiaru czcionki,
+układu strony) oraz optymalizacji korzystania ze Strony Internetowej (pliki
+Cookies funkcjonalne/preferencyjne)</li>
+    <li>prowadzenia anonimowych statystyk przedstawiających sposób korzystania
+ze Strony Internetowej (pliki Cookies analityczne i wydajnościowe)</li>
+    <li>wyświetlania i renderowania reklam, ograniczania liczby wyświetleń reklam
+oraz ignorowania reklam, których użytkownik nie chce oglądać, mierzenia
+skuteczności reklam, a także personalizacji reklam, to jest badania cech
+zachowania osób odwiedzających Stronę Internetową poprzez anonimową
+analizę ich działań (np. powtarzające się wizyty na określonych stronach,
+słowa kluczowe itp.) w celu stworzenia ich profilu i dostarczenia im reklam
+dopasowanych do ich przewidywanych zainteresowań, także wtedy kiedy
+odwiedzają oni inne strony internetowe w sieci reklamowej firmy Google
+Ireland Ltd. oraz Facebooka, tj. Meta Platforms Ireland Ltd. (pliki Cookies
+marketingowe, reklamowe i społecznościowe)</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div className="mb-5">Sprawdzenie, jakie pliki Cookies są wysyłane w danej chwili przez Stronę Internetową, jest możliwe niezależnie od
                 przeglądarki internetowej za pomocą narzędzi dostępnych np. na stronach internetowych:
                 https://www.cookiemetrix.com lub: https://www.cookie-checker.com/.</div>
