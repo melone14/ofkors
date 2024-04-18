@@ -141,12 +141,10 @@ const customTheme = (outerTheme: Theme) =>
               </IconButton>
             </div>
             <span>
-          Administratorem danych osobowych zbieranych za pośrednictwem Strony jest (tutaj należy podać imię i
-          nazwisko / nazwę Sprzedawcy). Dane są lub mogą być przetwarzane w celach oraz na podstawach wskazanych
+          Administratorem danych osobowych zbieranych za pośrednictwem Strony jest Dariusz Czajka. Dane są lub mogą być przetwarzane w celach oraz na podstawach wskazanych
           szczegółowo w polityce prywatności (np. realizacja umowy, marketing bezpośredni). Polityka prywatności
           zawiera pełną informację na temat przetwarzania danych przez administratora wraz z prawami
-          przysługującymi osobie, której dane dotyczą. Szybki kontakt z administratorem: adres email do kontaktu lub
-          tel.: numer telefonu kontaktowego
+          przysługującymi osobie, której dane dotyczą. Szybki kontakt z administratorem: d.czajka@ofkors.pl
             </span>
           </div>
         </Dialog>
