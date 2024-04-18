@@ -21,7 +21,7 @@ export default async function BlogList() {
                 )
             })}
             {response.posts.length === 0 && <>
-            <div className="my-20 text-3xl">Tu niebawem znajdziesz interesujące treści z rynku nieruchomości i pracy naszego biura</div>
+            <div className="my-40 text-3xl">Tu niebawem znajdziesz interesujące treści z rynku nieruchomości i pracy naszego biura</div>
             </>}
         </>
     )
