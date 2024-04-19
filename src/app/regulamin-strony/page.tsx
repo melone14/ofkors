@@ -2,7 +2,7 @@ export default function Page () {
     return (
         <>
         <div className="flex flex-col justify-center items-center px-5">
-            <h1 className="text-4xl mb-10">Regulamin Korzystania ze Strony Internetowej ofkors.pl</h1>
+            <h1 className="text-2xl mb-10 text-center font-bold">Regulamin Korzystania ze Strony Internetowej ofkors.pl</h1>
             <div className="max-w-[80rem] flex flex-col items-start">
                 <h2 className="text-3xl mb-5">O Nas</h2>
                 <div className="mb-5">Właścicielem strony internetowej dostępnej pod adresem internetowym www.ofkors.pl (dalej jako: „Strona”) jest spółka

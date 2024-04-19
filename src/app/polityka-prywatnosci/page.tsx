@@ -5,7 +5,7 @@ export default function Page () {
     return (
         <>
         <div className="flex flex-col justify-center items-center px-5">
-            <h1 className="text-4xl mb-10">Polityka Prywatności strony internetowej ofkors.pl</h1>
+            <h1 className="text-2xl mb-10 text-center font-bold">Polityka Prywatności strony internetowej ofkors.pl</h1>
             <div className="max-w-[80rem] flex flex-col items-start">
                 <h2 className="mb-5 text-3xl">Postanowienia Ogólne</h2>
                 <p className="mb-5">Niniejsza polityka prywatności strony internetowej dostępnej pod adresem internetowym www.ofkors.pl (dalej jako:

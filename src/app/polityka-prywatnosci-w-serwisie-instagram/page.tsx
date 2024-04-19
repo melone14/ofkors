@@ -4,7 +4,7 @@ export default function Page () {
     return (
     <>
         <div className="flex flex-col justify-center items-center px-5">
-            <h1 className="text-4xl mb-10">Polityka Prywatności konta „OFKORS_NIERUCHOMOSCI” w serwisie instagram.com</h1>
+            <h1 className="text-2xl mb-10 text-center font-bold">Polityka Prywatności konta „OFKORS_NIERUCHOMOSCI” w serwisie instagram.com</h1>
             <div className="max-w-[80rem] flex flex-col items-start">
                 <h2 className="text-3xl mb-5">§ 1 | Dlaczego ta polityka prywatności naszego Konta jest konieczna</h2>
                 <p className="mb-5">W przypadku odwiedzin naszego Konta, polubienia naszego posta, dodania komentarza lub rozpoczęcia obserwowania stajemy się obok
@@ -32,10 +32,10 @@ połączenie jak za zwykłe połączenie telefoniczne, zgodnie z pakietem taryfo
 <p className="mb-10">Korzystając z serwisu Instagram, w tym także z naszego Konta, administratorem Państwa danych osobowych staje się także usługodawca
 serwisu – Meta Platforms Ireland Ltd. Ltd. (4 Grand Canal Square, Grand Canal Harbour, Dublin 2 Ireland; dalej: Właściciel Serwisu
 Instagram lub Meta Platforms Ireland Ltd.), który przetwarza Państwa dane osobowe zgodnie z regulaminem serwisu
-(https://help.instagram.com/581066165581870), zasadami dotyczącymi danych
-(https://help.instagram.com/519522125107875/?helpref=hc_fnav&amp;bc[0]=Pomoc%20dotycz%C4%85ca%20Instagramu&amp;bc[1]=Centrum%2
-0prywatno%C5%9Bci%20i%20bezpiecze%C5%84stwa) oraz zasadami korzystania z plików cookies
-(https://help.instagram.com/1896641480634370?ref=ig). Jest to o tyle istotne, że dokumenty te regulują m. in. zasady udostępniania nam
+(https://help.instagram.com/581066165581870), zasadami dotyczącymi danych 
+<a href="https://help.instagram.com/519522125107875/?helpref=hc_fnav&amp;bc[0]=Pomoc%20dotycz%C4%85ca%20Instagramu&amp;bc[1]=Centrum%2
+0prywatno%C5%9Bci%20i%20bezpiecze%C5%84stwa">Link</a> oraz zasadami korzystania z plików cookies
+<a href="https://help.instagram.com/1896641480634370?ref=ig">Link</a>. Jest to o tyle istotne, że dokumenty te regulują m. in. zasady udostępniania nam
 Państwa danych przez Meta Platforms Ireland Ltd. oraz zasady ich przetwarzania w ramach serwisu Instagram.</p>
 <h2 className="text-3xl mb-5">§ 4 | Cel, podstawa i okres przetwarzania danych na Koncie przez Administratora</h2>
 <p className="mb-5">Administrator może przetwarzać dane osobowe osób korzystających z Konta w następujących celach i na następujących podstawach:</p>
@@ -95,9 +95,9 @@ mu funkcji przez Meta Platforms Ireland Ltd. oraz na zasadach określonych przez
 <p className="mb-5">Administrator może przekazywać dane osobowe osób korzystających z Konta następującym podmiotom:</p>
 <ol className="mb-10 ps-5 list-decimal list-inside">
     <li className="mb-5">Meta Platforms Ireland Ltd. na zasadach, w zakresie i zgodnie z regulaminem serwisu
-(https://help.instagram.com/581066165581870) oraz zasadami dotyczącymi danych:
-(https://help.instagram.com/519522125107875/?helpref=hc_fnav&amp;bc[0]=Pomoc%20dotycz%C4%85ca%20Instagramu&amp;bc[1]=Centrum%2
-0prywatno%C5%9Bci%20i%20bezpiecze%C5%84stwa);</li>
+(https://help.instagram.com/581066165581870) oraz zasadami dotyczącymi danych: 
+<a href="https://help.instagram.com/519522125107875/?helpref=hc_fnav&amp;bc[0]=Pomoc%20dotycz%C4%85ca%20Instagramu&amp;bc[1]=Centrum%2
+0prywatno%C5%9Bci%20i%20bezpiecze%C5%84stwa">Link</a>;</li>
     <li className="mb-5">podmiotom przetwarzającym je na zlecenie i w imieniu Administratora takim jak agencje marketingowe, bądź firmy świadczące
 usługi w obszarze IT, ale tylko w celu i zakresie niezbędnym dla realizacji usługi, w sposób niewykraczający poza polecenie
 Administratora;</li>

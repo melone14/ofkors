@@ -4,7 +4,7 @@ export default function Page () {
     return (
     <>
         <div className="flex flex-col justify-center items-center px-5">
-            <h1 className="text-4xl mb-10">Polityka Prywatności FunPage Ofkors Nieruchomości w serwisie facebook.com</h1>
+            <h1 className="text-2xl mb-10 text-center font-bold">Polityka Prywatności FunPage Ofkors Nieruchomości w serwisie facebook.com</h1>
             <div className="max-w-[80rem] flex flex-col items-start">
                 <h2 className="text-3xl mb-5">§ 1 | Dlaczego ta polityka prywatności naszego Konta jest konieczna</h2>
                 <p className="mb-5">W przypadku odwiedzin naszego Konta, polubienia naszego posta, dodania komentarza lub rozpoczęcia obserwowania stajemy się obok
