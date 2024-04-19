@@ -17,8 +17,8 @@ const OfkorsButton = styled(Button)({
     height: '56px',
     border: '1px solid',
     lineHeight: 1.5,
-    'background-color': '#ff5f6d',
-    borderColor: '#ff5f6d',
+    'background-color': '#47141e',
+    borderColor: '#47141e',
     '&:hover': {
       backgroundColor: '#ffc371',
       borderColor: '#ffc371',
@@ -38,20 +38,20 @@ const theme = createTheme({
       MuiSelect: {
         styleOverrides: {
           root: {
-            color: '#FFFFFF',
-            borderColor: '#47141e',
+            color: '#ffc371',
+            borderColor: '#ffc371',
             "& .MuiOutlinedInput-notchedOutline": {
-                borderColor: "#47141e"
+                borderColor: "#FFFFFF"
               },
             "&.Mui-focused": {
                 "& .MuiOutlinedInput-notchedOutline": {
-                  borderColor: "#ff5f6d",
-                  color: "#ff5f6d"
-                },
+                  borderColor: "#ffc371",
+                  color: "#ffc371"
+                }
               }
           },
           select : {
-            color: '#47141e',
+            color: '#FFFFFF',
           }
         },
       },
@@ -60,7 +60,7 @@ const theme = createTheme({
             root: {
                 color: "#47141e",
                 "&.Mui-focused": {
-                      color: "#ff5f6d"
+                      color: "#47141e"
                 }
             },
         }
@@ -68,7 +68,7 @@ const theme = createTheme({
       MuiInputBase: {
         styleOverrides: {
             root: {
-                color: "#47141e",
+                color: "#ffc371",
             }
         }
       },
@@ -80,8 +80,8 @@ const theme = createTheme({
                   },
                 "&.Mui-focused": {
                     "& .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "#ff5f6d",
-                      color: "#ff5f6d"
+                      borderColor: "#ffc371",
+                      color: "#ffc371"
                     },
                   }
             }
@@ -90,18 +90,18 @@ const theme = createTheme({
       MuiMenuItem: {
         styleOverrides: {
             root: {
-                backgroundColor: "#ff5f6d",
+                backgroundColor: "#ffc371",
                 color: '#FFFFFF',
                 "&:focus": {
-                    backgroundColor: "#f5959e",
+                    backgroundColor: "rgb(71, 20, 30)",
                   },
                   "&:hover": {
-                    backgroundColor: "#f5959e",
+                    backgroundColor: "rgb(71, 20, 30)",
                   },
                   "&.Mui-selected":{
-                    backgroundColor: "#f5959e",
+                    backgroundColor: "rgb(71, 20, 30)",
                     "&:hover": {
-                        backgroundColor: "#f5959e",
+                        backgroundColor: "rgba(71, 20, 30)",
                     }
                   }
             }
@@ -225,13 +225,13 @@ export const OfferSearchComponent = () => {
                 </div>
                 </div>
                 <OfkorsButton 
-                    className="px-5 w-full md:w-auto bg-[#ff5f6d]" 
+                    className="px-5 w-full md:w-auto bg-[#47141e]" 
                     variant="contained"
                     onClick={()=>{
                         setshowFilters((state)=>!state)
                     }}>Filtry</OfkorsButton>
                 <Link className="w-full md:w-auto" href={urlValue}>
-                    <OfkorsButton className="px-5 w-full md:w-auto bg-[#ff5f6d]" variant="contained">Szukaj</OfkorsButton>
+                    <OfkorsButton className="px-5 w-full md:w-auto bg-[#47141e]" variant="contained">Szukaj</OfkorsButton>
                 </Link>
             </div>
             {showFilters ? 

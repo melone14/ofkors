@@ -36,7 +36,7 @@ export default function Page() {
   return (
     <>
       <h1 className="my-20 text-6xl text-medium text-center hidden">Sprzedaj z Nami</h1>
-      <div className="w-full flex flex-col items-center my-20 wartosci py-20">
+      <div className="w-full flex flex-col items-center mt-20 wartosci py-20">
         <div className="flex flex-row items-start justify-center w-full flex-wrap px-5 gap-10 max-w-[85rem]">
           {wartosci.map((item, index)=>{
             return (
@@ -50,7 +50,7 @@ export default function Page() {
           })}
         </div>
       </div>
-        <h2 className="text-3xl md:text-4xl mb-5 font-bold text-center text-[#ff5f6d]">Oczywiste są dla nas</h2>
+        <h2 className="text-3xl md:text-4xl my-10 font-bold text-center text-[#ff5f6d]">Oczywiste są dla nas</h2>
         <div className="flex flex-col md:flex-row items-center justify-center gap-10 mb-20 md:mb-10 md:px-5">
           <div className="flex flex-col items-center justify-center gap-5 text-white w-60 h-60 rounded-full bg-[#47141e] shadow-2xl">
             <div><PiHandshake style={{ fontSize: "2.5rem"}}/></div>
