@@ -10,3 +10,11 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+.blog-cover {
+  background-image: url('/images/zdjecie_blog.jpg');
+  width: 100%;
+  height: auto; /* Możesz dostosować wysokość w zależności od Twoich potrzeb */
+  background-size: cover;
+  background-position: center;
+}
