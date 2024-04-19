@@ -66,7 +66,23 @@ const theme = createTheme({
       MuiMenuItem: {
         styleOverrides: {
             root: {
-                backgroundColor: "rgba(71, 20, 30, 0.7)",
+                '@media (min-width: 768px)': {
+                    backgroundColor: "rgba(71, 20, 30, 0.7)",
+                    color: '#FFFFFF',
+                    "&:focus": {
+                        backgroundColor: "rgb(71, 20, 30)",
+                    },
+                    "&:hover": {
+                        backgroundColor: "rgb(71, 20, 30)",
+                    },
+                    "&.Mui-selected":{
+                        backgroundColor: "rgb(71, 20, 30)",
+                        "&:hover": {
+                            backgroundColor: "rgba(71, 20, 30)",
+                        }
+                    }
+                  },
+                backgroundColor: "#ffc371",
                 color: '#FFFFFF',
                 "&:focus": {
                     backgroundColor: "rgb(71, 20, 30)",
