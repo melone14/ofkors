@@ -39,9 +39,9 @@ const theme = createTheme({
         styleOverrides: {
           root: {
             color: '#ffc371',
-            borderColor: '#ffc371',
+            borderColor: '#47141e',
             "& .MuiOutlinedInput-notchedOutline": {
-                borderColor: "#FFFFFF"
+                borderColor: "#47141e"
               },
             "&.Mui-focused": {
                 "& .MuiOutlinedInput-notchedOutline": {
