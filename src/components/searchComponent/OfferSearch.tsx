@@ -51,7 +51,7 @@ const theme = createTheme({
               }
           },
           select : {
-            color: '#FFFFFF',
+            color: '#47141e',
           }
         },
       },
