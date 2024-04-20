@@ -24,13 +24,13 @@ export const Testimonial = ({currentOpinion} : {currentOpinion: any}) => {
 
     return (
         <>
-            <div className="flex flex-row items-center justify-center my-10 max-w-[35rem] w-96 h-96 rounded-full shadow-2xl bg-[#FAF8F6] p-5">
+            <div className="flex flex-row items-center justify-center my-10 max-w-[35rem] w-80 h-80 md:w-96 md:h-96 rounded-full shadow-2xl bg-[#FAF8F6] p-5">
                 <div className={` flex flex-col justify-center items-center gap-y-5 opinion-container`}>
                     <div><Rating sx={{ '& .MuiRating-iconFilled': {
                         color: '#47141e',
                     },}} readOnly value={currentOpinion.rating} /></div>
-                    <div className="max-w-[20rem] text-md text-center min-h-40">{currentOpinion.descrition}</div>
-                    <div>{currentOpinion.name}</div>
+                    <div className="max-w-[20rem] text-sm md:text-md text-center min-h-40">{currentOpinion.descrition}</div>
+                    <div className='text-sm md:text-md'>{currentOpinion.name}</div>
                 </div>
             </div>
         </>

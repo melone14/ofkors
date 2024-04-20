@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer/footer";
 import { ScrollButton } from "@/components/scrollButton/ScrollButton";
 
 import { PhoneComponent } from "@/components/PhoneComponent/phoneComponent";
+import { CoockieComponent } from "@/components/coockie/CoockieComponent";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="pl">
       <body className="p-0 m-o">
         <PhoneComponent />
+        <CoockieComponent/>
         <ScrollButton />
         <Header/>
         <main className="flex flex-col items-center">
