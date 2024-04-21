@@ -18,3 +18,10 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+.gradient-text {
+  background-image: linear-gradient(to right, #ff5f6d, #ffc371);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
