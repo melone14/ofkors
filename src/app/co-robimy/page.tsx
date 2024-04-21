@@ -25,7 +25,6 @@ export const metadata: Metadata = {
 const wartosci = [
   { icon: <FaBuildingCircleCheck className="w-8 h-8 text-white" />, text:'Nieruchomości i praca z ludźmi to nasza pasja' },
   { icon: <FaBookReader className="w-8 h-8 text-white"/>, text:'Posiadamy kilkuletnie doświadczenie na rynku nieruchomości potwierdzone setkami zrealizowanych transakcji' },
-  { icon: <GoShieldCheck className="w-8 h-8 text-white"/>, text:'Stawiamy na jakość- w obsłudze klienta, przygotowaniu oferty oraz finalizacji transakcji' },
   { icon: <CiSquareCheck className="w-8 h-8 text-white"/>, text:'Jesteśmy skuteczni - sprzedajemy szybko i osiągamy wysokie ceny transakcyjne' },
   { icon: <PiHandshake className="w-8 h-8 text-white"/>, text:'Mierzymy wysoko- motywują nas efekty naszej pracy i opinie naszych klientów' },
   { icon: <PiStudent className="w-8 h-8 text-white"/>, text:'Dbamy o ciągły rozwój, szkolenia i warsztat pracy' },

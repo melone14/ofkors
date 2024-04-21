@@ -12,7 +12,7 @@ body {
 }
 
 .blog-cover {
-  background-image: url('/images/zdjecie_blog.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/zdjecie_blog.jpg');
   width: 100%;
   height: auto; /* Możesz dostosować wysokość w zależności od Twoich potrzeb */
   background-size: cover;
