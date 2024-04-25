@@ -15,6 +15,7 @@ import CropIcon from '@mui/icons-material/Crop';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import BathroomIcon from '@mui/icons-material/Bathroom';
 import StairsIcon from '@mui/icons-material/Stairs';
+import PaidIcon from '@mui/icons-material/Paid';
 
 const RowComponent = ({ label, data }: { label:string, data:string | number | undefined}) =>{
 
@@ -61,37 +62,30 @@ export default async function Page({ params }: { params: { slug: string } }) {
                             <PhotoComponent images={response.images} title={response.headerAdvertisement}/>
                             <div className="px-10 pb-10">
                                 <h1 className="text-3xl font-bold mb-14">{response.headerAdvertisement}</h1>
-                                {(response.totalArea || response.noOfRooms || response.noOfBathrooms || response.floorNo) && <div className="w-full flex flex-row flex-wrap items-center justify-around mb-14">
+                                {(response.totalArea || response.noOfRooms || (response.totalArea || response.lotArea) || response.floorNo) && <div className="w-full flex flex-row flex-wrap items-center justify-center mb-14 gap-5 md:gap-x-16">
                                     {response.totalArea ?
-                                    <div>
-                                        <div className="flex flex-col gap-y-2.5 items-center">
+                                        <div className="flex flex-col gap-y-2.5 items-center justify-center w-32 h-32">
                                             <CropIcon sx={{ color:"#47141e", fontSize:'3rem'}}/>
                                             <div>Powierzchnia</div>
                                             <div className="text-lg font-semibold">{response.totalArea}m<sup>2</sup></div>
                                         </div>
-                                        
-                                    </div>
                                     : null}
                                     {response.noOfRooms ?
-                                    <div>
-                                         <div className="flex flex-col gap-y-2.5 items-center">
+                                         <div className="flex flex-col gap-y-2.5 items-center justify-center w-32 h-32">
                                             <MeetingRoomIcon sx={{ color:"#47141e", fontSize:'3rem'}}/>
                                             <div>Liczba pokoi</div>
                                             <div className="text-lg font-semibold">{parseInt(response.noOfRooms)}</div>
+                                        </div> : null}
+                                    {(response.totalArea || response.lotArea) ?
+                                         <div className="flex flex-col gap-y-2.5 items-center justify-center w-32 h-32">
+                                            <PaidIcon sx={{ color:"#47141e", fontSize:'3rem'}}/>
+                                            <div>Cena za m<sup>2</sup></div>
+                                            <div className="text-lg font-semibold">{Math.round(parseFloat(response.price.amount)/((response.totalArea ? response.totalArea : response.lotArea) || 0))} {response.price.currency}</div>
                                         </div> 
-                                    </div> : null}
-                                    {response.noOfBathrooms ?
-                                    <div>
-                                         <div className="flex flex-col gap-y-2.5 items-center">
-                                            <BathroomIcon sx={{ color:"#47141e", fontSize:'3rem'}}/>
-                                            <div>Liczba łazienek</div>
-                                            <div className="text-lg font-semibold">{parseInt(response.noOfBathrooms)}</div>
-                                        </div> 
-                                    </div>
                                     : null}
                                     {response.floorNo ?
                                     <div>
-                                         <div className="flex flex-col gap-y-2.5 items-center">
+                                         <div className="flex flex-col gap-y-2.5 items-center justify-center w-32 h-32">
                                             <StairsIcon sx={{ color:"#47141e", fontSize:'3rem'}} />
                                             <div>Piętro</div>
                                             <div className="text-lg font-semibold">{parseInt(response.floorNo)}</div>

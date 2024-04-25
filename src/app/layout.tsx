@@ -11,6 +11,10 @@ import { CoockieComponent } from "@/components/coockie/CoockieComponent";
 export const metadata: Metadata = {
   title: "Ofkors | Twoja Najlepsza Agencja Nieruchomości",
   description: "Ofkors | Twoja Najlepsza Agencja Nieruchomości",
+  metadataBase: new URL('https://ofkors.pl'),
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export const revalidate = 3600
