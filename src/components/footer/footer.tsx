@@ -45,7 +45,7 @@ export const Footer = () => {
                             </Link>
                             <div className='flex flex-row mt-8'>
                                 <a className='border-2 border-white flex justify-center transition ease-in-out
-                                items-center p-2 rounded-full mr-2.5 hover:bg-[#ff5f6d]' href='https://www.facebook.com/'><Facebook/></a>
+                                items-center p-2 rounded-full mr-2.5 hover:bg-[#ff5f6d]' href='https://www.facebook.com/profile.php?id=61558595796568'><Facebook/></a>
                                 <a className='border-2 border-white flex justify-center transition ease-in-out
                                 items-center p-2 rounded-full mr-2.5 hover:bg-[#ff5f6d]' target='blank' href='https://www.instagram.com/ofkors_nieruchomosci/'><Instagram/></a>
                             </div>
