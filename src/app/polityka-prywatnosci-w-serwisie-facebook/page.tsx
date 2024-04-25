@@ -1,3 +1,9 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Ofkors | Polityka Prywatności w Serwisie Facebook',
+    description: 'Ofkors | Polityka Prywatności w Serwisie Facebook',
+  }
 
 
 export default function Page () {

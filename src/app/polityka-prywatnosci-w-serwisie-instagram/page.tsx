@@ -1,3 +1,9 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Ofkors | Polityka Prywatności w Serwisie Instagram',
+    description: 'Ofkors | Polityka Prywatności w Serwisie Instagram',
+  }
 
 
 export default function Page () {

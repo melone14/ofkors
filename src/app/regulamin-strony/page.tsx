@@ -1,3 +1,11 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Ofkors | Regulamin Strony',
+    description: 'Ofkors | Regulamin Strony',
+  }
+
+
 export default function Page () {
     return (
         <>
