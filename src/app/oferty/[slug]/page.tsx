@@ -6,7 +6,8 @@ import { AgentComponent } from "@/components/agent/agent";
 import { mortgageMarketSwapper, furnishedTypeSwapper, conditionSwapper, 
     materialSwapper, buildingTypeSwapper, availableNeighborhoodListSwapper,
     communicationListSwapper, heatingTypeListSwapper, hotWaterListSwapper,
-    objectTypeSwapper, windowTypeListSwapper, spaceFloorListSwapper, kitchenEquipmentSwapper } from "@/utils/realEstate";
+    objectTypeSwapper, windowTypeListSwapper, spaceFloorListSwapper, kitchenEquipmentSwapper,
+    waterTypeListSwapper, sewerageTypeListSwapper, electricityStatusSwapper, gasStatusSwapper } from "@/utils/realEstate";
 
 import { PhotoComponent } from "@/components/Photos/Photos";
 import { ScrollComponent } from "@/components/scrollComponent/ScrollComponent";
@@ -158,6 +159,20 @@ export default async function Page({ params }: { params: { slug: string } }) {
                                         return ' ' + kitchenEquipmentSwapper(item)
                                     })}`}/>
                                     <RowComponent label={"Liczba łazienek"} data={parseInt(response.noOfBathrooms)}/>
+                                    <RowComponent label={"Podłączenie Wodne"} data={`${response.waterTypeList.map(item => {
+                                        if (waterTypeListSwapper(item) === undefined) {
+                                            return '';
+                                        }
+                                        return ' ' + waterTypeListSwapper(item)
+                                    })}`}/>
+                                    <RowComponent label={"Podłączenie Gazowe"} data={gasStatusSwapper(response.gasStatus)}/>
+                                    <RowComponent label={"Podłączenie Elektryczne"} data={electricityStatusSwapper(response.electricityStatus)}/>
+                                    <RowComponent label={"Podłączenie Kanalizacyjne"} data={`${response.sewerageTypeList.map(item => {
+                                        if (sewerageTypeListSwapper(item) === undefined) {
+                                            return '';
+                                        }
+                                        return ' ' + sewerageTypeListSwapper(item)
+                                    })}`}/>
                                     <RowComponent label={"Adres"} data={`${response.location.province ? response.location.province + ', ' : ''}
                                     ${response.location.locality ? response.location.locality + ', ' : ''}
                                     ${response.location.quarter ? response.location.quarter + ', ' : ''}

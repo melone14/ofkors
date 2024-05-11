@@ -134,6 +134,14 @@ export type spaceFloorList = {
     name: "Parquet" |    "Panels" |    "BoardFloor" |    "TerraCotta" |    "Other" |    "Mixed" |    "ConcreteFloor" |    "FittedCarpet" |    "Laminate" |    "Tiles" |    "Linoleum" |    "Gres" |    "PCV" |    "Mozaic"
 }
 
+export type electricityStatus = "Yes" | "No" | "Directly" | "InWay"
+
+export type waterTypeList = { name:"No" | "Well" | "Urban" | "UrbanOnPlot" | "UrbanInWay" }
+
+export type sewerageTypeList = {
+    name: "No" | "Septic" | "TightCesspool" | "EcoCesspool" | "BiologicalCleaning"| "City" | "UrbanOnPlot" | "UrbanInWay"
+}
+
 export interface RealEstateObject {
     id: number;
     slug: string;
@@ -191,5 +199,8 @@ export interface RealEstateObject {
     totalArea: number;
     reception: boolean | null;
     garageList: garageList[]
-
+    electricityStatus: electricityStatus,
+    gasStatus: electricityStatus;
+    waterTypeList: waterTypeList[];
+    sewerageTypeList: sewerageTypeList[];
 }

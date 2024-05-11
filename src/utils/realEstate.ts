@@ -1,6 +1,6 @@
 
 import { furnishedType, condition, material, buildingType, availableNeighborhoodList, communicationList, heatingTypeList, hotWaterList,
- objectType, windowTypeList, spaceFloorList, kitchenEquipment } from "@/clients/types"
+ objectType, windowTypeList, spaceFloorList, kitchenEquipment, electricityStatus, waterTypeList, sewerageTypeList } from "@/clients/types"
 
 export const mortgageMarketSwapper = (string: "Primary" | "Secondary") =>{
 
@@ -13,6 +13,67 @@ export const mortgageMarketSwapper = (string: "Primary" | "Secondary") =>{
     return undefined
 }
 
+export const waterTypeListSwapper = (string: waterTypeList) =>{
+
+    switch(string.name) {
+        case "No":
+            return "brak";
+        case "Urban":
+            return "Wodociągi miejskie"
+        case "UrbanInWay":
+            return "Wodociągi miejskie"
+        case "UrbanOnPlot":
+            return "Wodociągi miejskie"
+        case "Well":
+            return "Wodociągi miejskie"
+    }
+    return undefined
+}
+
+export const sewerageTypeListSwapper = (string: sewerageTypeList) =>{
+
+    switch(string.name) {
+        case "BiologicalCleaning":
+            return "Czyszczenie Biologiczne";
+        case "City":
+            return "Miejska";
+        case "No":
+            return "Brak";
+        case "UrbanInWay":
+            return "Miejskie"
+    }
+    return undefined
+}
+
+export const electricityStatusSwapper = (string: electricityStatus) =>{
+
+    switch(string) {
+        case "Directly":
+            return 'Bezpośrednie';
+        case "InWay":
+            return "Wbudowane";
+        case "No":
+            return 'Brak'
+        case "Yes":
+            return "Jest"
+    }
+    return undefined
+}
+
+export const gasStatusSwapper = (string: electricityStatus) =>{
+
+    switch(string) {
+        case "Directly":
+            return 'Bezpośrednie';
+        case "InWay":
+            return "Wbudowane";
+        case "No":
+            return 'Brak'
+        case "Yes":
+            return "Jest"
+    }
+    return undefined
+}
 export const kitchenEquipmentSwapper = (string: kitchenEquipment) => {
     switch(string.name) {
         case "Dishwasher":
