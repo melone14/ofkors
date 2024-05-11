@@ -35,11 +35,11 @@ export default function Home() {
           <Image className='w-full rounded-xl mx-5 lg:mx-0 mb-5 lg:mb-0' src={BothAgents} alt="Two Agents" />
         </div>
         <div className='p-5 lg:p-0'>
-          <p className='lg:max-w-96 text-xl mb-5 text-left'>OFKORS NIERUCHOMOŚCI powstało ze wspólnej pasji do nieruchomości. Stworzyliśmy biuro z którego usług sami chcielibyśmy skorzystać. Dla nas każdy Klient, a tym samym każda nieruchomość to oddzielna historia, której częścią stajemy się również my. Jesteśmy dla ludzi, którzy chcą powierzyć ten kawałek swojego życia zespołowi doświadczonych, zaangażowanych oraz skutecznych doradców.</p>
-          <p className='lg:max-w-96 text-xl mb-5 text-center'>Jesteśmy ciekawi, jaką historię Ty nam opowiesz.</p>
+          <p className='lg:max-w-96 md:text-xl mb-5 text-left'>OFKORS NIERUCHOMOŚCI powstało ze wspólnej pasji do nieruchomości. Stworzyliśmy biuro z którego usług sami chcielibyśmy skorzystać. Dla nas każdy Klient, a tym samym każda nieruchomość to oddzielna historia, której częścią stajemy się również my. Jesteśmy dla ludzi, którzy chcą powierzyć ten kawałek swojego życia zespołowi doświadczonych, zaangażowanych oraz skutecznych doradców.</p>
+          <p className='lg:max-w-96 md:text-xl mb-5 text-center'>Jesteśmy ciekawi, jaką historię Ty nam opowiesz.</p>
           <div className='lg:max-w-96 flex flex-col items-center'>
-            <div className='lg:max-w-96 text-xl text-center'>Joanna Stojanowska</div>
-            <div className='lg:max-w-96 text-xl text-center mb-5'>Dariusz Czajka</div>
+            <div className='lg:max-w-96 md:text-xl text-center'>Joanna Stojanowska</div>
+            <div className='lg:max-w-96 md:text-xl text-center mb-5'>Dariusz Czajka</div>
             <Link className='text-center text-white px-5 py-2.5 bg-[#47141e] text-2xl rounded-xl' href={routes.aboutUs}>
               O nas
             </Link>

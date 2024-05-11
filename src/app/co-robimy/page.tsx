@@ -55,11 +55,11 @@ export default function Page() {
             <div><PiHandshake style={{ fontSize: "2.5rem"}}/></div>
             <div className="text-2xl">Relacja</div>
           </div>
-          <div className=" md:w-1/2 max-w-[30rem] text-xl text-center px-5 md:px-0">To fundament  naszego działania, zarówno w życiu codziennym, jak i w biznesie. Wiemy, że tylko dzięki odpowiedniej interakcji, zaufaniu i komunikacji z klientami jesteśmy w stanie wypracować wspólny sukces.</div>
+          <div className=" md:w-1/2 max-w-[30rem] md:text-xl text-center px-5 md:px-0">To fundament  naszego działania, zarówno w życiu codziennym, jak i w biznesie. Wiemy, że tylko dzięki odpowiedniej interakcji, zaufaniu i komunikacji z klientami jesteśmy w stanie wypracować wspólny sukces.</div>
         </div>
 
         <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-10 mb-20 md:mb-10 md:px-5">
-          <div className=" md:w-1/2 max-w-[30rem] text-xl text-center px-5 md:px-0">To dla nas priorytet na każdym etapie transakcji. W komunikacji z klientem, tworzeniu oferty nieruchomości, finalizacji transakcji.</div>
+          <div className=" md:w-1/2 max-w-[30rem] md:text-xl text-center px-5 md:px-0">To dla nas priorytet na każdym etapie transakcji. W komunikacji z klientem, tworzeniu oferty nieruchomości, finalizacji transakcji.</div>
           <div className="flex flex-col items-center justify-center gap-5 text-white w-60 h-60 rounded-full bg-[#47141e] shadow-2xl">
             <div><MdOutlineShield style={{ fontSize: "2.5rem"}}/></div>
             <div className="text-2xl">Jakość</div>
@@ -71,7 +71,7 @@ export default function Page() {
             <div><CiTrophy style={{ fontSize: "2.5rem"}}/></div>
             <div className="text-2xl">Skuteczność</div>
           </div>
-          <div className=" md:w-1/2 max-w-[30rem] text-xl text-center px-5 md:px-0">To sens naszego działania. Na końcu transakcji liczy się efekt. Dzięki temu od wielu lat pracujemy na poleceniach.</div>
+          <div className=" md:w-1/2 max-w-[30rem] md:text-xl text-center px-5 md:px-0">To sens naszego działania. Na końcu transakcji liczy się efekt. Dzięki temu od wielu lat pracujemy na poleceniach.</div>
         </div>
       <ContactSection/>
     </>

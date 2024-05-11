@@ -8,6 +8,8 @@ import { Dialog } from "@mui/material"
 
 import Logo from '@/images/logo/base_logo_transparent_background.png'
 
+import CookieIcon from '@mui/icons-material/Cookie';
+
 export const CoockieComponent = () => {
 
     const [open, setOpen] = useState(false);
@@ -25,6 +27,12 @@ export const CoockieComponent = () => {
 
     return (
         <>
+        <div onClick={()=>{
+            setOpen(true);
+        }} id="scrollup" className="p-5 bg-[#ffc371] transition ease-in-out hover:bg-[#ff5f6d]
+        flex flex-row justify-center items-center rounded-full cursor-pointer shadow-lg">
+            <CookieIcon sx={{ color: 'white' }} />
+        </div>
         <Dialog onClose={
             ()=>{
                 setOpen(false);

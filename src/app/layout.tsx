@@ -29,8 +29,10 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body className="p-0 m-o">
-        <PhoneComponent />
-        <CoockieComponent/>
+        <div className="fixed z-10 bottom-4 left-4 flex flex-col gap-5">
+          <PhoneComponent />
+          <CoockieComponent/>
+        </div>
         <ScrollButton />
         <Header/>
         <main className="flex flex-col items-center">
