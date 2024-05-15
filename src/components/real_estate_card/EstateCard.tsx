@@ -12,8 +12,8 @@ export const RealEstateCard = ({ index, item, sold }: { index: number; item: Rea
           alt:string;
           main: boolean;
       } = item.images.find(image => image.main === true) || item.images[0]
-        const dateCreated = new Date(item.dateCreated)
     return (
+      
         <>
                 <Link href={`${routes.offers}/${item.slug}`} key={index} className="rounded-lg transition ease-in-out hover:shadow-2xl 
                 flex flex-col shadow-xl w-[20rem] md:w-[32rem]">
