@@ -41,7 +41,7 @@ export default async function Page ({ params }: { params: { slug: string } }) {
             </div>
             <div>
                 <h3 className="text-3xl lg:text-4xl mb-10">O mnie</h3>
-                <div className="w-full lg:w-[40rem] text-xl" dangerouslySetInnerHTML={{__html: agent.content}}></div>
+                <div className="w-full lg:w-[40rem] md:text-xl" dangerouslySetInnerHTML={{__html: agent.content}}></div>
             </div>
         </div>
         {response.offers.length !== 0 ? <div className="w-full flex flex-col items-center">
@@ -54,7 +54,7 @@ export default async function Page ({ params }: { params: { slug: string } }) {
           })}
         </div>
         </div> : null}
-        {response.sold_offers.length !== 0 ? <div className="w-full flex flex-col items-center">
+        {/* {response.sold_offers.length !== 0 ? <div className="w-full flex flex-col items-center">
             <h2 className="text-3xl font-bold my-10">Zrealizowane oferty</h2>
             <div className="flex flex-col md:flex-row flex-wrap w-full gap-x-10 gap-y-10 px-10 justify-center mb-10">
             {response.sold_offers.map((item, index)=>{
@@ -63,7 +63,7 @@ export default async function Page ({ params }: { params: { slug: string } }) {
             )
           })}
         </div>
-        </div> : null}
+        </div> : null} */}
         {agent.opinion ?
         <>
         <h3 className="text-3xl font-bold my-10">Opinie Agenta</h3>
